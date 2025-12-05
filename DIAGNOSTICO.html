@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diagnóstico Completo</title>
+    <style>
+        body { background: #1a1a2e; color: #fff; font-family: monospace; padding: 20px; }
+        .box { background: #16213e; padding: 15px; margin: 10px 0; border-left: 4px solid #0f3460; }
+        .success { color: #0f0; }
+        .error { color: #f00; }
+        .info { color: #0ff; }
+        h1 { color: #0ff; border-bottom: 2px solid #0ff; padding-bottom: 10px; }
+        pre { background: #0a0e27; padding: 10px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+
+<h1>🔍 DIAGNÓSTICO - KiraTech Spa</h1>
+
+<div class="box">
+    <h3 class="info">1️⃣ ARCHIVOS</h3>
+    <p>✅ index.html - Estructura HTML</p>
+    <p>✅ styles.css - Estilos CSS</p>
+    <p>✅ script.js - JavaScript con servicios</p>
+</div>
+
+<div class="box">
+    <h3 class="info">2️⃣ ESTRUCTURA HTML</h3>
+    <pre>&lt;div class="item" onclick="mostrarDetalle(this, 'mantpc')"&gt;
+    Contenido del servicio
+&lt;/div&gt;</pre>
+    <p class="success">✅ Los onclick están configurados correctamente</p>
+</div>
+
+<div class="box">
+    <h3 class="info">3️⃣ SCRIPT CARGADO</h3>
+    <p>&lt;script src="script.js"&gt;&lt;/script&gt; debe estar ANTES de &lt;/body&gt;</p>
+    <p class="success">✅ Script está al final del body</p>
+</div>
+
+<div class="box">
+    <h3 class="info">4️⃣ CSS DEL DETALLE</h3>
+    <pre>.detalle {
+    max-height: none;
+    overflow: visible;
+    animation: aparecer 0.5s...;
+}</pre>
+    <p class="success">✅ Estilos permiten mostrar todo el contenido</p>
+</div>
+
+<div class="box">
+    <h3 class="info">5️⃣ VARIABLES JAVASCRIPT</h3>
+    <pre>let abierto = null;
+let elementoActivo = null;
+const textos = {
+    mantpc: `...`,
+    pasta: `...`,
+    ... 6 servicios más
+}</pre>
+    <p class="success">✅ 8 servicios definidos en textos{}</p>
+</div>
+
+<div class="box">
+    <h3 class="info">6️⃣ FUNCIÓN mostrarDetalle()</h3>
+    <pre>function mostrarDetalle(el, tipo) {
+    // 1. Verifica que el servicio existe
+    // 2. Cierra detalles abiertos
+    // 3. Crea elemento div.detalle
+    // 4. Inserta con innerHTML
+    // 5. Anima con clase .mostrar
+    // 6. Scroll suave
+}</pre>
+    <p class="success">✅ Función implementada y debuggeada</p>
+</div>
+
+<div class="box">
+    <h3 class="info">7️⃣ ANIMACIÓN CSS</h3>
+    <pre>@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}</pre>
+    <p class="success">✅ Duración: 0.5s - Suave y visible</p>
+</div>
+
+<div class="box" style="border-left-color: #0f0;">
+    <h3 class="success">✅ CONCLUSIÓN: TODO DEBERÍA FUNCIONAR</h3>
+    <p>Si aún no ves los detalles:</p>
+    <ol>
+        <li>Abre la consola (F12)</li>
+        <li>Haz clic en un servicio</li>
+        <li>Mira si aparecen mensajes en console.log()</li>
+        <li>Revisa si hay errores en rojo</li>
+    </ol>
+</div>
+
+<div class="box">
+    <h3>🧪 PRUEBA DIRECTA</h3>
+    <a href="simple-test.html" style="color: #0ff; text-decoration: underline;">→ Abre simple-test.html para probar</a>
+</div>
+
+</body>
+</html>

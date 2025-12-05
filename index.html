@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KiraTech Spa</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="KiraTechspa.png" class="logo">
+</header>
+
+
+<h1>Mantenimiento profesional en Chihuahua, MX ✨</h1>
+
+<p style="text-align: center; color: #d0d0ff; font-size: 1.05rem; margin: 18px; max-width: 920px; margin-left: auto; margin-right: auto;">
+    <strong style="color: #ff9ff3;">Recupera rendimiento y silencio en tu equipo — servicio profesional y garantía.</strong><br>
+    En Chihuahua, ofrecemos limpieza profunda, cambio de pasta térmica premium (Arctic MX‑4 / MX‑6), instalación de SSD y servicio a domicilio en la zona norte de la ciudad.<br>
+    <span style="font-size: 0.92em;">Transparencia, técnicos calificados y reportes antes/después. Resultados típicos en detalles del servicio.</span>
+</p>
+
+<h2 class="section-title">🔧 Servicios para PC</h2>
+
+<p style="text-align: center; color: #c0c0ff; margin-bottom: 20px; font-size: 0.95rem;">
+    Haz click en cada servicio para ver detalles completos, resultados esperados y precio
+</p>
+
+<div class="catalogo" id="pc">
+    <div class="item" onclick="mostrarDetalle(this, 'mantpc')">
+        🖥️ Mantenimiento Profesional de PC
+        <div style="font-size: 0.85rem; color: #c0c0ff; margin-top: 8px;">
+            ⏱️ 2-4h | 💰 Desde 500 | 🔥 Temp -15°C típico | 📊 Garantía 30d
+        </div>
+        <a class="reserve-btn" href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20quiero%20agendar%20Mantenimiento%20Profesional%20de%20PC%20en%20Chihuahua%20(Servicio%20a%20domicilio%20Norte).%20Mi%20nombre:%20%5BTu%20nombre%5D">Reservar</a>
+    </div>
+
+    <div class="item" onclick="mostrarDetalle(this, 'pasta')">
+        ❄️ Cambio de Pasta Térmica Premium
+        <div style="font-size: 0.85rem; color: #c0c0ff; margin-top: 8px;">
+            ⏱️ 1h-2h | 💰 desde 400| ❄️ -10°C típico | 📊 Garantía 12m
+        </div>
+        <a class="reserve-btn" href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20quiero%20agendar%20Cambio%20de%20Pasta%20T%C3%A9rmica%20(Arctic%20MX-4/MX-6)%20en%20Chihuahua%20(Servicio%20a%20domicilio%20Norte).%20Mi%20nombre:%20%5BTu%20nombre%5D">Reservar</a>
+    </div>
+
+    <div class="item" onclick="mostrarDetalle(this, 'optimizacion')">
+        ⚡ Optimización del Sistema
+        <div style="font-size: 0.85rem; color: #c0c0ff; margin-top: 8px;">
+            ⏱️ 1.5-2h | 💰 MX300$| ⚙️ Mejoras reales y medibles | 📊 Garantía 60d
+        </div>
+        <a class="reserve-btn" href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20quiero%20agendar%20Diagn%C3%B3stico%20y%20Mejoras%20(SSD)%20en%20Chihuahua%20(Servicio%20a%20domicilio%20Norte).%20Mi%20nombre:%20%5BTu%20nombre%5D">Reservar</a>
+    </div>
+
+    <div class="item" onclick="mostrarDetalle(this, 'ssd')">
+        🚀 Cambio e Instalación de SSD
+        <div style="font-size: 0.85rem; color: #c0c0ff; margin-top: 8px;">
+            ⏱️ 1-2h | 💰 MX$400 - MX$600 | 🚀 Boot ~15s típico | 📊 Garantía 30d
+        </div>
+        <a class="reserve-btn" href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20quiero%20agendar%20Instalaci%C3%B3n%20de%20SSD%20en%20Chihuahua%20(Servicio%20a%20domicilio%20Norte).%20Mi%20nombre:%20%5BTu%20nombre%5D">Reservar</a>
+    </div>
+</div>
+
+<h2 class="section-title">🎮 Servicios para Consolas</h2>
+
+<p style="text-align: center; color: #c0c0ff; margin-bottom: 20px; font-size: 0.95rem;">
+    PS4 • PS5 • Xbox • Nintendo Switch - Tratamiento VIP para tu consola favorita
+</p>
+
+<div class="catalogo" id="consolas">
+    <div class="item" onclick="mostrarDetalle(this, 'ps4')">
+        🎮 Mantenimiento PS4 y cambio de pasta termica
+        <div style="font-size: 0.85rem; color: #c0c0ff; margin-top: 8px;">
+            ⏱️ 2-2.5h | 💰 Desde MX$400 | 🔊 -80% Ruido | 📊 Menor termeratura
+    </div>
+    <a class="reserve-btn" href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20quiero%20agendar%20Mantenimiento%20Profesional%20de%20PC%20en%20Chihuahua%20(Servicio%20a%20domicilio%20Norte).%20Mi%20nombre:%20%5BTu%20nombre%5D">Reservar</a>
+    </div>
+
+
+    <!-- PS5 removed as requested -->
+
+    <div class="item" onclick="mostrarDetalle(this, 'xbox')">
+        🎮 Xbox One / Series S/X – Servicio Completo
+        <div style="font-size: 0.85rem; color: #c0c0ff; margin-top: 8px;">
+            ⏱️ 2-2.5h | 💰 Desde MX$400 | ⚡ Rendimiento estable | 📊 Garantía 60d
+        </div>
+        <a class="reserve-btn" href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20quiero%20agendar%20Mantenimiento%20Profesional%20de%20PC%20en%20Chihuahua%20(Servicio%20a%20domicilio%20Norte).%20Mi%20nombre:%20%5BTu%20nombre%5D">Reservar</a>
+    </div> 
+    <div class="item" onclick="mostrarDetalle(this, 'switch')">
+        🎮 Nintendo Switch – Limpieza y Mejora Térmica
+        <div style="font-size: 0.85rem; color: #c0c0ff; margin-top: 8px;">
+            ⏱️ 1.5-2h | 💰Desde MX$400 | 🌡️ -10°C | 📊 Garantía 45d
+        </div>
+        <a class="reserve-btn" href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20quiero%20agendar%20Mantenimiento%20Profesional%20de%20PC%20en%20Chihuahua%20(Servicio%20a%20domicilio%20Norte).%20Mi%20nombre:%20%5BTu%20nombre%5D">Reservar</a>
+    </div>
+</div>
+   
+</div>
+
+
+<h2 class="section-title">⭐ Lo que dicen nuestros clientes</h2>
+<div class="testimonios">
+    <div class="testimonio">
+        <div class="estrellas">⭐⭐⭐⭐⭐</div>
+        <p>"En mi Asus TUF A15 (Ryzen 7) la temperatura del CPU bajó 32°C y la GPU 16°C después de limpieza, limpieza de disipador y aplicación de Arctic MX‑4. Lo medimos antes y después con stress test. Resultado real y documentado."</p>
+        <p class="autor">— Ricardo (Chihuahua)</p>
+    </div>
+    <div class="testimonio">
+        <div class="estrellas">⭐⭐⭐⭐⭐</div>
+        <p>"Antes mi PS4 parecía una turbina de avión y en Call of Duty me daba tirones bien feos. La llevé a KiraTech Spa y después del mantenimiento quedó súper silenciosa, ya no se calienta como antes y el juego corre mucho más fluido. La neta sí se siente el cambio, llego luego luego y al poco tiempo ya estaba jugando "</p>
+        <p class="autor">— Aldo</p>
+    </div>
+    
+</div>
+
+<div class="cta-section">
+    <h2 style="color:#ff9ff3; font-size:1.8rem; margin-bottom:15px;">📞 ¿Listo para que tu dispositivo brille?</h2>
+    <p class="cta-texto">Contáctanos ahora y agenda tu cita</p>
+    <a href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20quiero%20agendar%20un%20servicio.%20Mi%20nombre:%20%5BTu%20nombre%5D%20Ubicaci%C3%B3n:%20Chihuahua" target="_blank" class="btn-whatsapp">
+        💬 Contactar por WhatsApp
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61584244140086&locale=es_LA" target="_blank" class="btn-facebook">
+        🔵 Visitar Facebook
+    </a>
+    <p class="cta-subtext">Servicio rápido • Profesionales certificados • Garantía incluida</p>
+</div>
+
+<footer>
+    💜 KiraTech Spa – "Donde tu tecnología descansa como reina" 💜
+</footer>
+
+<!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20quiero%20agendar%20un%20servicio.%20Mi%20nombre:%20%5BTu%20nombre%5D%20Ubicaci%C3%B3n:%20Chihuahua" target="_blank" class="whatsapp-float" title="Contactanos por WhatsApp">
+    📱
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>

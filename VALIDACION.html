@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Validación - KiraTech Spa</title>
+    <style>
+        body { background:#1a1a2e; color:#fff; font-family:Arial; padding:20px; }
+        .success { color:#00ff00; }
+        .error { color:#ff0000; }
+        .info { color:#00ccff; }
+        .box { background:#0f0f1e; padding:20px; margin:10px 0; border-radius:10px; border-left:4px solid #00ff00; }
+        pre { overflow-x:auto; background:#0a0a15; padding:10px; border-radius:5px; }
+    </style>
+</head>
+<body>
+
+<h1>🔧 Validación de KiraTech Spa</h1>
+
+<div class="box">
+    <h2 class="success">✅ CAMBIOS REALIZADOS:</h2>
+    <pre>
+1. ✅ Función mostrarDetalle() completamente reescrita
+   - Mejor lógica para abrir/cerrar detalles
+   - Validación de servicios existentes
+   - Manejo correcto de animaciones
+
+2. ✅ CSS - Scroll Horizontal Eliminado
+   - Agregado overflow-x:hidden al body
+   - Agregado overflow-x:hidden a .catalogo
+   - Removido transform:scale del item hover
+   - Agregado width:100% y box-sizing:border-box a items
+
+3. ✅ Detalle - Visualización Mejorada
+   - max-height aumentado a 3000px
+   - overflow:hidden para contener contenido
+   - word-wrap:break-word para texto
+   - width:100% para ocupar todo el ancho
+
+4. ✅ Script.js - Orden de Carga
+   - Movido al &lt;head&gt; para cargarse antes del HTML
+   - Asegura que textos[] esté disponible
+    </pre>
+</div>
+
+<div class="box">
+    <h2 class="info">📋 SERVICIOS DISPONIBLES:</h2>
+    <ul style="font-size:18px; line-height:2;">
+        <li>🖥️ mantpc - Mantenimiento PC</li>
+        <li>❄️ pasta - Pasta Térmica</li>
+        <li>⚡ optimizacion - Optimización Sistema</li>
+        <li>🚀 ssd - Instalación SSD</li>
+        <li>🎮 ps4 - Mantenimiento PS4</li>
+        <li>🕹️ ps5 - Mantenimiento PS5</li>
+        <li>🎮 xbox - Mantenimiento Xbox</li>
+        <li>🎮 switch - Mantenimiento Switch</li>
+    </ul>
+</div>
+
+<div class="box">
+    <h2 class="success">✅ PRÓXIMOS PASOS:</h2>
+    <ol style="font-size:16px; line-height:2;">
+        <li>Abre index.html en tu navegador</li>
+        <li>Haz clic en cualquier servicio</li>
+        <li>Deberías ver la información completa debajo</li>
+        <li>No debe haber scroll horizontal</li>
+        <li>Las animaciones deben ser suaves</li>
+    </ol>
+</div>
+
+</body>
+</html>

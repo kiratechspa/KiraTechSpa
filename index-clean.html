@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiraTech Spa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="KiraTechspa.png" class="logo" alt="Logo KiraTech">
+</header>
+
+<h1>✨ KiraTech Spa ✨</h1>
+
+<p style="text-align: center; color: #d0d0ff; font-size: 1.1rem; margin: 20px; max-width: 900px; margin-left: auto; margin-right: auto;">
+    <strong style="color: #ff9ff3;">Tu tecnología no es máquina. Es tu compañera.</strong><br>
+    Merece descansar como reina. Aquí en KiraTech Spa, tu PC, consola y dispositivos reciben el tratamiento real que merecen.<br>
+    <span style="font-size: 0.95em;">Limpieza profunda • Optimización profesional • Garantía incluida • Resultados visibles</span>
+</p>
+
+<h2 class="section-title">🔧 Servicios para PC</h2>
+
+<p style="text-align: center; color: #c0c0ff; margin-bottom: 20px; font-size: 0.95rem;">
+    Haz click en cada servicio para ver detalles completos
+</p>
+
+<div class="catalogo">
+    <div class="item" onclick="mostrarDetalle(this, 'mantpc')">
+        🖥️ Mantenimiento Profesional de PC
+        <div style="font-size: 0.85rem; color: #c0c0ff; margin-top: 8px;">
+            ⏱️ 2-3h | 💰 $45k-$65k | 🔥 Temp -15°C | 📊 Garantía 30d
+        </div>
+    </div>
+
+    <div class="item" onclick="mostrarDetalle(this, 'pasta')">
+        ❄️ Cambio de Pasta Térmica Premium
+        <div style="font-size: 0.85rem; color: #c0c0ff; margin-top: 8px;">
+            ⏱️ 45m-1h | 💰 $25k-$35k | ❄️ -10°C | 📊 Garantía 12m
+        </div>
+    </div>
+
+    <div class="item" onclick="mostrarDetalle(this, 'optimizacion')">
+        ⚡ Optimización y Aceleración Total del Sistema
+        <div style="font-size: 0.85rem; color: #c0c0ff; margin-top: 8px;">
+            ⏱️ 1.5-2h | 💰 $35k-$50k | ⚡ +60% Velocidad | 📊 Garantía 60d
+        </div>
+    </div>
+
+    <div class="item" onclick="mostrarDetalle(this, 'ssd')">
+        🚀 Cambio e Instalación de SSD
+        <div style="font-size: 0.85rem; color: #c0c0ff; margin-top: 8px;">
+            ⏱️ 1-2h | 💰 $35k-$55k | 🚀 Boot 15s | 📊 Garantía 30d
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title">🎮 Servicios para Consolas</h2>
+
+<p style="text-align: center; color: #c0c0ff; margin-bottom: 20px; font-size: 0.95rem;">
+    PS4 • PS5 • Xbox • Nintendo Switch
+</p>
+
+<div class="catalogo">
+    <div class="item" onclick="mostrarDetalle(this, 'ps4')">
+        🎮 Mantenimiento PS4
+        <div style="font-size: 0.85rem; color: #c0c0ff; margin-top: 8px;">
+            ⏱️ 2-2.5h | 💰 $55k-$75k | 🔊 -80% Ruido | 📊 Garantía 60d
+        </div>
+    </div>
+
+    <div class="item" onclick="mostrarDetalle(this, 'ps5')">
+        🕹️ Mantenimiento PS5
+        <div style="font-size: 0.85rem; color: #c0c0ff; margin-top: 8px;">
+            ⏱️ 2.5-3h | 💰 $75k-$95k | 👑 VIP Premium | 📊 Garantía 90d
+        </div>
+    </div>
+
+    <div class="item" onclick="mostrarDetalle(this, 'xbox')">
+        🎮 Xbox One / Series S/X
+        <div style="font-size: 0.85rem; color: #c0c0ff; margin-top: 8px;">
+            ⏱️ 2-2.5h | 💰 $55k-$75k | ⚡ 4K/120fps | 📊 Garantía 60d
+        </div>
+    </div>
+
+    <div class="item" onclick="mostrarDetalle(this, 'switch')">
+        🎮 Nintendo Switch
+        <div style="font-size: 0.85rem; color: #c0c0ff; margin-top: 8px;">
+            ⏱️ 1.5-2h | 💰 $45k-$65k | 🌡️ -10°C | 📊 Garantía 45d
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title">⭐ Lo que dicen nuestros clientes</h2>
+<div class="testimonios">
+    <div class="testimonio">
+        <div class="estrellas">⭐⭐⭐⭐⭐</div>
+        <p>"Mi PC quedó como nueva. Es increíble."</p>
+        <p class="autor">— Juan M.</p>
+    </div>
+    <div class="testimonio">
+        <div class="estrellas">⭐⭐⭐⭐⭐</div>
+        <p>"La PS5 ahora no suena como ventilador."</p>
+        <p class="autor">— María G.</p>
+    </div>
+    <div class="testimonio">
+        <div class="estrellas">⭐⭐⭐⭐⭐</div>
+        <p>"Mejor dinero invertido. Excelente servicio."</p>
+        <p class="autor">— Carlos R.</p>
+    </div>
+</div>
+
+<div class="cta-section">
+    <h2 style="color:#ff9ff3; font-size:1.8rem; margin-bottom:15px;">📞 ¿Listo para que tu dispositivo brille?</h2>
+    <p class="cta-texto">Contáctanos ahora y agenda tu cita</p>
+    <a href="https://wa.me/?text=Hola%20KiraTech%20Spa%20Quiero%20agendar%20un%20servicio" target="_blank" class="btn-whatsapp">
+        💬 Contactar por WhatsApp
+    </a>
+</div>
+
+<footer>
+    💜 KiraTech Spa – "Donde tu tecnología descansa como reina" 💜
+</footer>
+
+<a href="https://wa.me/?text=Hola%20KiraTech%20Spa%20Quiero%20agendar%20un%20servicio" target="_blank" class="whatsapp-float">
+    📱
+</a>
+
+<!-- SCRIPT AL FINAL - MÁS IMPORTANTE -->
+<script src="script.js"></script>
+
+</body>
+</html>

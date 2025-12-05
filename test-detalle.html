@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Detalle - KiraTech Spa</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0a0014; color: white; font-family: Poppins, sans-serif; overflow-x: hidden; }
+        .item { padding: 20px; margin: 15px 0; background: rgba(185,102,255,0.1); border-radius: 15px; cursor: pointer; border: 2px solid rgba(185,102,255,0.3); }
+        .item:hover { background: rgba(255,159,243,0.2); border-color: #ff9ff3; }
+        .detalle { margin: 15px 0; background: rgba(255,159,243,0.12); padding: 20px; border-radius: 15px; border: 2px solid #ff9ff3; border-left: 6px solid #ff9ff3; max-height: 3000px; overflow: hidden; word-wrap: break-word; width: 100%; box-sizing: border-box; }
+        .detalle h3 { color: #ff9ff3; margin-bottom: 15px; font-size: 1.5rem; }
+        .detalle p { margin: 12px 0; line-height: 1.8; color: #e0d0ff; }
+        .detalle ul { list-style: none; margin: 15px 0; padding: 15px; background: rgba(255,159,243,0.05); border-radius: 10px; border-left: 3px solid #ff9ff3; }
+        .detalle li { margin: 8px 0; padding-left: 25px; color: #c0c0ff; position: relative; }
+        .detalle li:before { content: '✓'; position: absolute; left: 0; color: #ff9ff3; font-weight: bold; }
+        .container { width: 90%; max-width: 900px; margin: 30px auto; }
+        h1 { text-align: center; color: #ff9ff3; margin: 20px 0; }
+    </style>
+</head>
+<body>
+
+<h1>🔧 Test Detalles</h1>
+
+<div class="container">
+    <div class="item" onclick="mostrarDetalle(this, 'mantpc')">
+        🖥️ Mantenimiento Profesional de PC - CLICK AQUÍ
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+function mostrarDetalle(el, tipo){
+    console.log('Click en:', tipo);
+    console.log('Servicio existe:', !!textos[tipo]);
+    
+    if (!textos[tipo]) {
+        console.error(`No existe el servicio: ${tipo}`);
+        return;
+    }
+    
+    // Remover detalle anterior si existe
+    let detalleExistente = el.nextElementSibling;
+    if (detalleExistente && detalleExistente.classList.contains('detalle')) {
+        detalleExistente.remove();
+        return;
+    }
+    
+    // Crear el elemento
+    const contenedor = document.createElement("div");
+    contenedor.innerHTML = textos[tipo];
+    const detalleDiv = contenedor.firstChild;
+    
+    console.log('Detalle creado:', detalleDiv.outerHTML.substring(0, 100));
+    
+    // Insertar
+    el.insertAdjacentElement("afterend", detalleDiv);
+}
+</script>
+
+</body>
+</html>

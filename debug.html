@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug - KiraTech Spa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="KiraTechspa.png" class="logo" alt="Logo">
+</header>
+
+<h1>✨ KiraTech Spa - DEBUG ✨</h1>
+
+<h2 class="section-title">🔧 Test de Servicios</h2>
+
+<div class="catalogo">
+    <div class="item" onclick="mostrarDetalle(this, 'mantpc'); console.log('Click en mantpc');">
+        🖥️ Mantenimiento PC
+    </div>
+</div>
+
+<div style="margin:40px; color:#fff; background:#1a0033; padding:20px; border-radius:10px;">
+    <h3>✅ Validación del Script:</h3>
+    <pre id="debug-info"></pre>
+</div>
+
+<script>
+// Debug info
+console.log('Script cargado');
+console.log('Servicios disponibles:', Object.keys(textos));
+document.getElementById('debug-info').textContent = 'Servicios cargados: ' + Object.keys(textos).join(', ');
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
