@@ -127,7 +127,6 @@ const textos = {
         <p style="margin:15px 0;"><strong>💾 SSD RECOMENDADOS:</strong> Samsung 990 Pro | WD Black | Kingston Fury Beast | Seagate FireCuda</p>
         <p style="margin:15px 0;"><strong>📌 OPCIONES POPULARES:</strong></p>
         <ul>
-            <li>💰 Budget: SSD 256GB (aprox. MX$540 - MX$900) + Instalación</li>
             <li>⭐ Recomendado: SSD 500GB (aprox. MX$900 - MX$1,440) + Instalación</li>
             <li>👑 Premium: SSD 1TB (aprox. MX$1,440 - MX$2,160) + Instalación</li>
         </ul>
@@ -156,7 +155,6 @@ const textos = {
             <li><strong>Test en Juego Exigente:</strong> Verificación de temperatura y ruido real</li>
         </ul>
         
-        <p style="margin:15px 0;"><strong>⏱️ Tiempo:</strong> 2 - 2.5 horas | <strong>💰 Precio:</strong> MX$1,400 - MX$2,000</p>
         <p style="margin:15px 0;"><strong>📊 RESULTADOS ESPERADOS:</strong></p>
         <ul>
             <li>🔊 Ruido: De jet a susurro (80% reducción)</li>
@@ -167,11 +165,6 @@ const textos = {
         </ul>
         
         <p style="margin:15px 0;"><strong>🛠️ SERVICIO COMPLETO O PARCIAL:</strong></p>
-        <ul>
-            <li>Solo Limpieza: MX$1,150 (ruido -60%, temp -8°C)</li>
-            <li>Limpieza + Pasta: MX$1,650 (ruido -80%, temp -15°C)</li>
-            <li>Limpieza + Pasta + Pads: MX$2,000 (MÁXIMO rendimiento)</li>
-        </ul>
         <p><strong>🛡️ Garantía: 60 días | Incluye Reporte Térmico Certificado</strong></p>
         <p style="color:#d0d0ff; font-size:0.95em;">Recomendado si tu PS4 suena como turbina después de 4+ años de uso intenso.</p>
     </div>
@@ -201,7 +194,6 @@ const textos = {
             <li><strong>Calibración de Fans:</strong> Balance entre ruido y temperatura</li>
         </ul>
         
-        <p style="margin:15px 0;"><strong>⏱️ Tiempo:</strong> 2 - 2.5 horas | <strong>💰 Precio:</strong> MX$1,400 - MX$2,000</p>
         <p style="margin:15px 0;"><strong>📊 RESULTADOS ESPERADOS:</strong></p>
         <ul>
             <li>🔊 Ruido: Casi silenciosa (especialmente Series X)</li>
@@ -212,11 +204,6 @@ const textos = {
         </ul>
         
         <p style="margin:15px 0;"><strong>📌 POR MODELO:</strong></p>
-        <ul>
-            <li><strong>Xbox One:</strong> Limpieza + optimización (MX$1,400)</li>
-            <li><strong>Xbox Series S:</strong> Servicio estándar (MX$1,700)</li>
-            <li><strong>Xbox Series X:</strong> Con pasta térmica premium (MX$2,000)</li>
-        </ul>
         
         <p style="margin:15px 0;"><strong>🎯 ESPECIALMENTE RECOMENDADO PARA:</strong> Gamers competitivos, streamers, usuarios intensivos (8+ horas/día)</p>
         <p><strong>🛡️ Garantía: 60 días | Incluye Reporte Técnico + Fotos Before/After</strong></p>
@@ -401,5 +388,6 @@ if (document.readyState === 'loading'){
 } else {
     initSparkles({count:22});
 }
+
 
 
