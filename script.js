@@ -6,7 +6,7 @@ let elementoActivo = null;
 const textos = {
     mantpc: `
     <div class='detalle'>
-        <h3>👑 Mantenimiento Profesional de PC - Spa Completo</h3>
+        <h3>CORE CLEAN – Servicio Base</h3>
         <p><strong>El tratamiento de realeza que tu computadora merece.</strong></p>
         <p>Tu PC es tu compañera de trabajo. Merece descanso y cuidado profesional. En KiraTech Spa le damos el tratamiento completo para que respire como nueva.</p>
         
@@ -401,3 +401,4 @@ if (document.readyState === 'loading'){
 } else {
     initSparkles({count:22});
 }
+
