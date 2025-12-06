@@ -180,10 +180,10 @@ const textos = {
             <li>🎮 Experiencia: Juegos sin interrupciones</li>
             <li>📈 Longevidad: Extiende vida útil 2-3 años</li>
         </ul>
-        <p> 
-        <strong>Precio regular:</strong> <s>$500 MXN</s><br>
-        <strong>Descuento por apertura navideña🎄</strong> –$150 MXN<br>
-        🔥 <strong >Total hoy: $350 MXN</strong>
+           <p> 
+        <strong>Precio regular:</strong> <s>$750 MXN</s><br>
+        <strong>Descuento por apertura navideña🎄</strong> –$350 MXN<br>
+        🔥 <strong >Total hoy: $400 MXN</strong>
         </p>
         <p style="margin:15px 0;"><strong>🛠️ SERVICIO COMPLETO O PARCIAL:</strong></p>
         <p><strong>🛡️ Garantía: 60 días | Incluye Reporte Térmico Certificado</strong></p>
@@ -224,10 +224,10 @@ const textos = {
             <li>📈 Longevidad: Asegura 5+ años sin problemas</li>
         </ul>
         
-            <p> 
-        <strong>Precio regular:</strong> <s>$500 MXN</s><br>
-        <strong>Descuento por apertura navideña🎄</strong> –$150 MXN<br>
-        🔥 <strong >Total hoy: $350 MXN</strong>
+              <p> 
+        <strong>Precio regular:</strong> <s>$750 MXN</s><br>
+        <strong>Descuento por apertura navideña🎄</strong> –$350 MXN<br>
+        🔥 <strong >Total hoy: $400 MXN</strong>
         </p>
         
         <p style="margin:15px 0;"><strong>🎯 ESPECIALMENTE RECOMENDADO PARA:</strong> Gamers competitivos, streamers, usuarios intensivos (8+ horas/día)</p>
@@ -269,9 +269,9 @@ const textos = {
             <li>📈 Longevidad: +2 años de vida útil</li>
         </ul>
             <p> 
-        <strong>Precio regular:</strong> <s>$500 MXN</s><br>
-        <strong>Descuento por apertura navideña🎄</strong> –$150 MXN<br>
-        🔥 <strong >Total hoy: $350 MXN</strong>
+        <strong>Precio regular:</strong> <s>$750 MXN</s><br>
+        <strong>Descuento por apertura navideña🎄</strong> –$350 MXN<br>
+        🔥 <strong >Total hoy: $400 MXN</strong>
         </p>
         <p style="margin:15px 0;"><strong>🔋 NOTA SOBRE BATERÍA:</strong></p>
         <ul>
@@ -417,6 +417,7 @@ if (document.readyState === 'loading'){
 } else {
     initSparkles({count:22});
 }
+
 
 
 
