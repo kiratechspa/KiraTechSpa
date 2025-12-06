@@ -35,7 +35,11 @@ const textos = {
         
         <p><strong>🛡️ Garantía: 30 días | Incluye Reporte Técnico</strong></p>
         <p style="color:#d0d0ff; font-size:0.95em;">Tu PC sale como nueva, reluciente y lista para trabajar contigo. Reserva por WhatsApp o inbox — cupos limitados.</p>
-
+        <p> 
+        <strong>Precio regular:</strong> <s>$950 MXN</s><br>
+        <strong>Descuento por apertura navideña🎄</strong> –$350 MXN<br>
+        🔥 <strong >Total hoy: $600 MXN</strong>
+        </p>
         <p style="margin:12px 0; color:#fff7; font-size:0.95em;"><strong>Caso real (ejemplo documentado):</strong> En una Asus TUF A15 (Ryzen 7) realizamos limpieza completa, limpieza del disipador, y aplicación de Arctic MX‑4; con pruebas antes/después en stress test el CPU mostró una reducción de ~32°C y la GPU ~16°C. Los resultados varían según el estado del equipo y las condiciones de uso.</p>
     </div>
     `,
@@ -66,8 +70,13 @@ const textos = {
             <li>🔧 Evita throttling automático</li>
             <li>📈 Extiende vida del hardware 3-5 años</li>
         </ul>
+        <p> 
+        <strong>Precio regular:</strong> <s>$800 MXN</s><br>
+        <strong>Descuento por apertura navideña🎄</strong> –$350 MXN<br>
+        🔥 <strong >Total hoy: $450 MXN</strong>
+        </p>
         
-        <p style="margin:15px 0;"><strong>🏆 MARCAS PREMIUM USADAS:</strong> Arctic MX-4 | Arctic MX-6 | Thermal Grizzly Kryonaut (según disponibilidad)</p>
+        <p style="margin:15px 0;"><strong>🏆 MARCAS PREMIUM USADAS:</strong> Arctic MX-4 | Arctic MX-6 (según disponibilidad)</p>
         <p><strong>🛡️ Garantía: 6 meses | Incluye Reporte Térmico Certificado</strong></p>
         <p style="color:#d0d0ff; font-size:0.95em;">Perfecta para gamers exigentes, streamers y profesionales que necesitan máximo rendimiento. Reserva por inbox/WhatsApp.</p>
     </div>
@@ -88,7 +97,12 @@ const textos = {
             <li><strong>Reporte técnico:</strong> Resultados y pasos recomendados por escrito</li>
         </ul>
         
-        <p style="margin:15px 0;"><strong>⏱️ Tiempo aproximado:</strong> 45 min - 1.5 horas | <strong>💰 Precio diagnóstico:</strong> MX$350 - MX$900 (según alcance)</p>
+        <p style="margin:15px 0;"><strong>⏱️ Tiempo aproximado:</strong> 45 min - 1.5 horas </p>
+        <p> 
+        <strong>Precio regular:</strong> <s>$300 MXN</s><br>
+        <strong>Descuento por apertura navideña🎄</strong> –$100 MXN<br>
+        🔥 <strong >Total hoy: $200 MXN | Gratis al contratar cualquier otro servicio para tu computadora o laptop</strong>
+        </p>
         <p style="margin:15px 0;"><strong>📌 TIENDA (KiraTesh Store):</strong> Ofreceremos componentes y SSD recomendados en nuestra tienda (KiraTesh Store) próximamente.</p>
         <p style="color:#d0d0ff; font-size:0.95em;">Servicio ideal si sospechas que tu disco está lento, falla o quieres migrar a SSD con seguridad. Incluye reporte y opción de cotización.</p>
     </div>
@@ -114,7 +128,10 @@ const textos = {
             <li><strong>Stress Test:</strong> Verificación de estabilidad completa</li>
         </ul>
         
-        <p style="margin:15px 0;"><strong>⏱️ Tiempo:</strong> 1 - 2 horas | <strong>💰 Precio Servicio:</strong> MX$400 - MX$600 (SSD no incluido)</p>
+        <p style="margin:15px 0;"><strong>⏱️ Tiempo:</strong> 1 - 2 horas </p>
+        <p>
+        <strong>Descuento por apertura navideña</strong> –$350 MXN, pida su descuento al agendar<br>
+        </p>
         <p style="margin:15px 0;"><strong>📊 RESULTADOS ESPERADOS:</strong></p>
         <ul>
             <li>⚡ Boot (arranque): De 120s a 15-20s</li>
@@ -127,8 +144,8 @@ const textos = {
         <p style="margin:15px 0;"><strong>💾 SSD RECOMENDADOS:</strong> Samsung 990 Pro | WD Black | Kingston Fury Beast | Seagate FireCuda</p>
         <p style="margin:15px 0;"><strong>📌 OPCIONES POPULARES:</strong></p>
         <ul>
-            <li>⭐ Recomendado: SSD 500GB (aprox. MX$900 - MX$1,440) + Instalación</li>
-            <li>👑 Premium: SSD 1TB (aprox. MX$1,440 - MX$2,160) + Instalación</li>
+        
+            <li>Premium: SSD 1TB Kingston nv3 PCIe 4.0 (MX$1,050) + Instalación</li>
         </ul>
         <p><strong>🛡️ Garantía: Hardware según fabricante + 30 días servicio | Incluye Reporte Técnico</strong></p>
         <p style="color:#d0d0ff; font-size:0.95em;">La mejora MÁS importante que puedes hacer a una PC vieja. Cambia completamente la experiencia.</p>
@@ -163,7 +180,11 @@ const textos = {
             <li>🎮 Experiencia: Juegos sin interrupciones</li>
             <li>📈 Longevidad: Extiende vida útil 2-3 años</li>
         </ul>
-        
+        <p> 
+        <strong>Precio regular:</strong> <s>$500 MXN</s><br>
+        <strong>Descuento por apertura navideña🎄</strong> –$150 MXN<br>
+        🔥 <strong >Total hoy: $350 MXN</strong>
+        </p>
         <p style="margin:15px 0;"><strong>🛠️ SERVICIO COMPLETO O PARCIAL:</strong></p>
         <p><strong>🛡️ Garantía: 60 días | Incluye Reporte Térmico Certificado</strong></p>
         <p style="color:#d0d0ff; font-size:0.95em;">Recomendado si tu PS4 suena como turbina después de 4+ años de uso intenso.</p>
@@ -203,7 +224,11 @@ const textos = {
             <li>📈 Longevidad: Asegura 5+ años sin problemas</li>
         </ul>
         
-        <p style="margin:15px 0;"><strong>📌 POR MODELO:</strong></p>
+            <p> 
+        <strong>Precio regular:</strong> <s>$500 MXN</s><br>
+        <strong>Descuento por apertura navideña🎄</strong> –$150 MXN<br>
+        🔥 <strong >Total hoy: $350 MXN</strong>
+        </p>
         
         <p style="margin:15px 0;"><strong>🎯 ESPECIALMENTE RECOMENDADO PARA:</strong> Gamers competitivos, streamers, usuarios intensivos (8+ horas/día)</p>
         <p><strong>🛡️ Garantía: 60 días | Incluye Reporte Técnico + Fotos Before/After</strong></p>
@@ -243,7 +268,11 @@ const textos = {
             <li>🎮 Joy-Con: Conexión más estable</li>
             <li>📈 Longevidad: +2 años de vida útil</li>
         </ul>
-        
+            <p> 
+        <strong>Precio regular:</strong> <s>$500 MXN</s><br>
+        <strong>Descuento por apertura navideña🎄</strong> –$150 MXN<br>
+        🔥 <strong >Total hoy: $350 MXN</strong>
+        </p>
         <p style="margin:15px 0;"><strong>🔋 NOTA SOBRE BATERÍA:</strong></p>
         <ul>
             <li>Si tienes 3+ años, probablemente necesite reemplazo</li>
