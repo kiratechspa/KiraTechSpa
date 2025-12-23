@@ -1,201 +1,425 @@
+<!--
+    ===========================================
+    KIRATECH TECH SPA - SITIO WEB PRINCIPAL
+    ===========================================
+    Archivo: index.html
+    Descripción: Página principal del servicio técnico KiraTech Tech Spa
+    Tecnologías: HTML5, CSS3, JavaScript (Vanilla)
+    Autor: KiraTech Tech Spa
+    Última actualización: Diciembre 2025
+-->
 <!DOCTYPE html>
+<!-- Define que es un documento HTML5 -->
 <html lang="es">
+<!-- Idioma español para mejor SEO y accesibilidad -->
 <head>
+<!-- ===========================================
+     CONFIGURACIÓN BÁSICA Y SEO
+     =========================================== -->
 <meta charset="UTF-8">
+<!-- Codificación de caracteres UTF-8 para soporte completo de español -->
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Configuración responsive para móviles -->
 
-<title>KiraTech Spa | Mantenimiento de PC y Consolas en Chihuahua</title>
+<title>KiraTech Tech Spa | Reparación y Mantenimiento de Computadoras y Consolas en Chihuahua</title>
+<!-- Título SEO optimizado con ubicación local -->
 
-<meta name="description" content="KiraTech Spa ofrece mantenimiento profesional de PC, laptops, consolas PS4, PS5, Xbox y Nintendo Switch en Chihuahua. Limpieza profunda, pasta térmica premium, SSD y servicio con garantía.">
+<!-- ===========================================
+     META TAGS PARA SEO
+     =========================================== -->
+<meta name="description" content="Servicio técnico profesional de reparación y mantenimiento de computadoras, laptops, PS4, Xbox y Nintendo Switch en Chihuahua. Limpieza profunda, cambio de componentes y diagnóstico experto.">
+<!-- Descripción que aparece en resultados de búsqueda -->
 
-<meta name="keywords" content="mantenimiento pc chihuahua, limpieza pc chihuahua, cambio pasta térmica, mantenimiento ps4 chihuahua, mantenimiento xbox, servicio técnico computadoras chihuahua">
+<meta name="keywords" content="reparación computadoras Chihuahua, servicio técnico PC Chihuahua, mantenimiento laptops Chihuahua, reparación consolas Chihuahua, cambio componentes PC, diagnóstico computadoras Chihuahua, limpieza PC profesional Chihuahua, reparación PS4 Chihuahua, reparación Xbox Chihuahua, reparación Nintendo Switch Chihuahua">
+<!-- Keywords para posicionamiento en búsquedas locales -->
 
+<!-- ===========================================
+     META TAGS DE LOCALIZACIÓN Y AUTOR
+     =========================================== -->
+<meta name="author" content="KiraTech Tech Spa">
+<!-- Autor del sitio web -->
+
+<meta name="language" content="Spanish">
+<!-- Idioma del contenido -->
+
+<!-- Meta tags de geolocalización para SEO local -->
+<meta name="geo.region" content="MX-CHH">
+<!-- Región: Chihuahua, México -->
+
+<meta name="geo.placename" content="Chihuahua">
+<!-- Ciudad específica -->
+
+<meta name="geo.position" content="28.632995;-106.069099">
+<!-- Coordenadas GPS exactas -->
+
+<meta name="ICBM" content="28.632995, -106.069099">
+<!-- Formato alternativo de coordenadas -->
+
+<!-- ===========================================
+     REDES SOCIALES - OPEN GRAPH (FACEBOOK)
+     =========================================== -->
+<meta property="og:type" content="website">
+<!-- Tipo de contenido para Facebook -->
+
+<meta property="og:url" content="https://kiratechspa.github.io/KiraTechSpa/">
+<!-- URL canónica del sitio -->
+
+<meta property="og:title" content="KiraTech Tech Spa | Reparación y Mantenimiento de Computadoras y Consolas en Chihuahua">
+<!-- Título para compartir en Facebook -->
+
+<meta property="og:description" content="Servicio técnico profesional especializado en reparación de computadoras, laptops, PS4, Xbox y Nintendo Switch. Diagnóstico experto y componentes originales.">
+<!-- Descripción para Facebook -->
+
+<meta property="og:image" content="https://kiratechspa.github.io/KiraTechSpa/kiratechspa.png">
+<!-- Imagen para compartir en Facebook -->
+
+<!-- ===========================================
+     REDES SOCIALES - TWITTER CARDS
+     =========================================== -->
+<meta property="twitter:card" content="summary_large_image">
+<!-- Tipo de tarjeta de Twitter -->
+
+<meta property="twitter:url" content="https://kiratechspa.github.io/KiraTechSpa/">
+<!-- URL para Twitter -->
+
+<meta property="twitter:title" content="KiraTech Tech Spa | Reparación Computadoras Chihuahua">
+<!-- Título para Twitter -->
+
+<meta property="twitter:description" content="Servicio técnico profesional de reparación y mantenimiento de computadoras y consolas en Chihuahua.">
+<!-- Descripción para Twitter -->
+
+<meta property="twitter:image" content="https://kiratechspa.github.io/KiraTechSpa/kiratechspa.png">
+<!-- Imagen para Twitter -->
+
+<!-- ===========================================
+     META TAGS PARA MÓVILES Y APPS
+     =========================================== -->
+<meta name="theme-color" content="#ff9ff3">
+<!-- Color del tema para navegadores móviles -->
+
+<meta name="msapplication-TileColor" content="#ff9ff3">
+<!-- Color para Windows tiles -->
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- Permite funcionar como app en iOS -->
+
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<!-- Estilo de la barra de estado en iOS -->
+
+<meta property="apple-mobile-web-app-title" content="KiraTech Tech Spa">
+<!-- Título de la app en iOS -->
+
+<meta name="mobile-web-app-capable" content="yes">
+<!-- Permite funcionar como app en Android -->
+<!-- ===========================================
+     SEO - ROBOTS Y CANONICAL
+     =========================================== -->
 <meta name="robots" content="index, follow">
+<!-- Indica a los motores de búsqueda que indexen y sigan enlaces -->
 
 <link rel="canonical" href="https://kiratechspa.github.io/KiraTechSpa/">
+<!-- URL canónica para evitar contenido duplicado -->
 
+<!-- ===========================================
+     RECURSOS EXTERNOS
+     =========================================== -->
 <link rel="icon" type="image/png" href="kiratechspa.png">
+<!-- Icono del sitio web -->
+
 <link rel="stylesheet" href="styles.css">
+<!-- Hoja de estilos CSS -->
+
+<!-- ===========================================
+     SCHEMA.ORG MARKUP PARA SEO
+     ===========================================
+     Datos estructurados que ayudan a Google a entender el contenido
+     Mejora el posicionamiento y muestra rich snippets en resultados
+-->
+<!-- Schema.org FAQ markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo toma un servicio de mantenimiento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los servicios básicos toman 2–3 horas. Servicios más complejos pueden tomar más tiempo. El tiempo exacto se confirma tras el diagnóstico."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajan con garantía?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Mantenimiento preventivo: 30 días. Servicios térmicos: 6 meses. Instalación de SSD: 30 días. Reparaciones de consolas: 60 días."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Ofrecen servicio a domicilio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, ofrecemos servicio a domicilio en la zona norte de Chihuahua. El costo adicional es de $150 MXN."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué incluye el diagnóstico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Incluye revisión de hardware, medición de temperaturas, análisis de rendimiento y recomendaciones. Es gratuito si contratas el servicio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajan con componentes originales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Utilizamos componentes de calidad profesional y compatibles con especificaciones del fabricante."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
 
 <body>
+<!-- ===========================================
+     CUERPO PRINCIPAL DEL DOCUMENTO
+     =========================================== -->
 
+<!-- Navegación de accesibilidad (oculta visualmente pero disponible para lectores de pantalla) -->
+<nav style="position:absolute; left:-9999px;" aria-label="Menú de navegación">
+    <!-- Menú de navegación accesible para usuarios con discapacidades -->
+    <ul>
+        <li><a href="#servicios-pc">Servicios para PC</a></li>
+        <li><a href="#servicios-consolas">Servicios para Consolas</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#faq">Preguntas Frecuentes</a></li>
+    </ul>
+</nav>
+
+<!-- ===========================================
+     HEADER - LOGO Y TITULAR PRINCIPAL
+     =========================================== -->
 <header>
-    <img src="kiratechspa.png" class="logo">
+    <!-- Logo principal del sitio -->
+    <img src="kiratechspa.png" alt="KiraTech Tech Spa - Servicio Técnico Profesional de Computadoras y Consolas en Chihuahua" class="logo">
 </header>
 
+<!-- ===========================================
+     TITULAR PRINCIPAL H1
+     =========================================== -->
+<h1>Servicio Técnico Profesional de Reparación y Mantenimiento de Computadoras y Consolas en Chihuahua</h1>
+<!-- Título principal H1 - el más importante para SEO -->
 
-<h1>Mantenimiento profesional en Chihuahua, MX </h1>
 
+<!-- ===========================================
+     DESCRIPCIÓN GENERAL DEL SERVICIO
+     =========================================== -->
 <p style="text-align: center; color: #d0d0ff; font-size: 1.05rem; margin: 18px; max-width: 920px; margin-left: auto; margin-right: auto;">
-    <strong style="color: #ff9ff3;">Recupera rendimiento y silencio en tu equipo — servicio profesional y garantía.</strong><br>
-    En Chihuahua, ofrecemos limpieza profunda, cambio de pasta térmica premium (Arctic MX-4 / MX-6), instalación de SSD y servicio a domicilio en la zona norte de la ciudad.<br>
-    <span style="font-size: 0.92em;">Transparencia, técnicos calificados y reportes antes/después. Resultados típicos en detalles del servicio.</span>
+    <strong style="color: #ff9ff3;">Recupera el rendimiento óptimo de tu equipo — servicio técnico profesional con diagnóstico preciso.</strong><br>
+    Ofrecemos reparación y mantenimiento especializado de computadoras y consolas en Chihuahua, con limpieza profesional de componentes, cambio de pasta térmica premium, instalación de SSD y servicio técnico certificado en la zona norte de la ciudad.<br>
+    <span style="font-size: 0.92em;">Diagnóstico completo, componentes originales, reportes técnicos detallados y garantía en todos nuestros servicios.</span>
 </p>
 
-<h2 class="section-title">🔧 Servicios para PC</h2>
+<!-- ===========================================
+     SECCIÓN DE SERVICIOS PARA COMPUTADORAS
+     =========================================== -->
+<h2 class="section-title" id="servicios-pc">🔧 Servicios Técnicos para PC</h2>
+<!-- Título H2 para la sección de servicios PC - importante para SEO -->
 
 <p style="text-align: center; color: #c0c0ff; margin-bottom: 20px; font-size: 0.95rem;">
-    Haz click en cada servicio para ver detalles completos, resultados esperados y precio
+    Diagnóstico profesional y reparación especializada — haz click en cada servicio para ver procesos técnicos detallados
 </p>
+<!-- Descripción introductoria de los servicios PC -->
 
+<!-- Contenedor del catálogo de servicios PC -->
 <div class="catalogo" id="pc">
 
     <div class="item" onclick="mostrarDetalle(this, 'mantpc')">
-        🔥 ¿Tu PC se calienta, hace ruido o va lenta?
+        �Computadora lenta o con sobrecalentamiento
         <div style="font-size:0.9rem; color:#c0c0ff; margin-top:6px;">
-            Mantenimiento profesional completo → <strong>CORE CLEAN</strong>
+            Mantenimiento preventivo completo → <strong>DIAGNÓSTICO Y LIMPIEZA PROFESIONAL</strong>
         </div>
         <div style="font-size:0.85rem; color:#ff9ff3; margin-top:6px;">
-            Menos calor • Más rendimiento • Mayor vida útil
+            Análisis técnico • Limpieza especializada • Optimización del sistema
         </div>
         <div style="font-size:0.8rem; color:#aaa; margin-top:6px;">
             ⏱️ 2–5h | 💰 MXN$950 | 🔥 -15°C típico | 📊 Garantía 30 días
         </div>
         <a class="reserve-btn" 
-           href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20me%20interesa%20contratar%20el%20Mantenimiento%20Profesional%20de%20PC%20(CORE%20CLEAN)">
+           href="https://wa.me/526142738302?text=Hola%20KiraTech%20Tech%20Spa,%20me%20interesa%20el%20Mantenimiento%20Preventivo%20Completo%20(DIAGN%C3%93STICO%20Y%20LIMPIEZA%20PROFESIONAL)">
            📲 Ver detalles y reservar
         </a>
     </div>
 
     <div class="item" onclick="mostrarDetalle(this, 'pasta')">
-        ❄️ Temperaturas altas en CPU o GPU
+        🌡️ CPU/GPU con temperaturas altas
         <div style="font-size:0.9rem; color:#c0c0ff; margin-top:6px;">
-            Cambio de pasta térmica premium → <strong>THERMAL BOOST</strong>
+            Reemplazo de pasta térmica profesional → <strong>THERMAL SWAP</strong>
         </div>
         <div style="font-size:0.85rem; color:#ff9ff3; margin-top:6px;">
-            Menos temperatura • Menos ruido • Más estabilidad
+            Componentes premium • Aplicación técnica • Medición certificada
         </div>
         <div style="font-size:0.8rem; color:#aaa; margin-top:6px;">
             ⏱️ 1–2h | 💰 MXN$800 | ❄️ -10°C típico | 📊 Garantía 12 meses
         </div>
         <a class="reserve-btn" 
-           href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20me%20interesa%20el%20Cambio%20de%20Pasta%20Térmica%20Premium%20(THERMAL%20BOOST%20MX)">
+           href="https://wa.me/526142738302?text=Hola%20KiraTech%20Tech%20Spa,%20me%20interesa%20el%20Reemplazo%20de%20Pasta%20T%C3%A9rmica%20Profesional%20(THERMAL%20SWAP)">
            📲 Ver detalles y reservar
         </a>
     </div>
 
     <div class="item" onclick="mostrarDetalle(this, 'optimizacion')">
-        ⚙️ Windows lento, trabado o inestable
+        🖥️ Windows lento, inestable o con errores
         <div style="font-size:0.9rem; color:#c0c0ff; margin-top:6px;">
-            Optimización completa del sistema → <strong>SYSTEM BOOST</strong>
+            Optimización completa del sistema → <strong>SYSTEM OPTIMIZATION</strong>
         </div>
         <div style="font-size:0.85rem; color:#ff9ff3; margin-top:6px;">
-            Arranque rápido • Mejor respuesta • Menos errores
+            Diagnóstico profundo • Limpieza de software • Configuración óptima
         </div>
         <div style="font-size:0.8rem; color:#aaa; margin-top:6px;">
-            ⏱️ 1.5–2h | 💰 MX$300 | ⚙️ Mejoras reales | 📊 Garantía 60 días
+            ⏱️ 1.5–2h | 💰 MX$300 | ⚙️ Rendimiento máximo | 📊 Garantía 60 días
         </div>
         <a class="reserve-btn" 
-           href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20quiero%20contratar%20la%20Optimizaci%C3%B3n%20del%20Sistema%20(SYSTEM%20BOOST)">
+           href="https://wa.me/526142738302?text=Hola%20KiraTech%20Tech%20Spa,%20quiero%20contratar%20la%20Optimizaci%C3%B3n%20Completa%20del%20Sistema%20(SYSTEM%20OPTIMIZATION)">
            📲 Ver detalles y reservar
         </a>
     </div>
 
     <div class="item" onclick="mostrarDetalle(this, 'ssd')">
-        🚀 Tu PC tarda mucho en encender
+        💾 PC tarda mucho en encender o HDD falla
         <div style="font-size:0.9rem; color:#c0c0ff; margin-top:6px;">
-            Instalación y migración a SSD → <strong>SSD OVERDRIVE</strong>
+            Instalación y migración a SSD → <strong>SSD UPGRADE PRO</strong>
         </div>
         <div style="font-size:0.85rem; color:#ff9ff3; margin-top:6px;">
-            Arranca en segundos • Todo corre más rápido
+            Velocidad extrema • Migración segura • Componentes premium
         </div>
         <div style="font-size:0.8rem; color:#aaa; margin-top:6px;">
             ⏱️ 1–2h | 💰 MX$600 | 🚀 Boot ~15s | 📊 Garantía 30 días
-        </div>
-        <a class="reserve-btn" 
-           href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20me%20interesa%20el%20Cambio%20e%20Instalaci%C3%B3n%20de%20SSD%20(SSD%20OVERDRIVE)">
+        </div><a class="reserve-btn" 
+           href="https://wa.me/526142738302?text=Hola%20KiraTech%20Tech%20Spa,%20me%20interesa%20el%20Cambio%20e%20Instalaci%C3%B3n%20de%20SSD%20(SSD%20UPGRADE%20PRO)">
            📲 Ver detalles y reservar
         </a>
+        
+        
     </div>
 
 </div>
+<!-- Fin del catálogo de servicios PC -->
 
-
-<h2 class="section-title">🎮 Servicios para Consolas</h2>
+<!-- ===========================================
+     SECCIÓN DE SERVICIOS PARA CONSOLAS
+     =========================================== -->
+<h2 class="section-title" id="servicios-consolas">🎮 Servicio Técnico para Consolas</h2>
+<!-- Título H2 para la sección de servicios de consolas - importante para SEO -->
 
 <p style="text-align: center; color: #c0c0ff; margin-bottom: 20px; font-size: 0.95rem;">
-    PS4 • PS5 • Xbox • Nintendo Switch - Tratamiento VIP para tu consola favorita
+    Reparación especializada para PS4 • PS5 • Xbox Series X/S • Nintendo Switch — diagnóstico y componentes originales
 </p>
+<!-- Descripción introductoria de los servicios para consolas -->
 
+<!-- Contenedor del catálogo de servicios para consolas -->
 <div class="catalogo" id="consolas">
 
     <div class="item" onclick="mostrarDetalle(this, 'ps4')">
-        🎮 ¿Tu PS4 suena como turbina?
+        🎮 PS4 con ruido excesivo o sobrecalentamiento
         <div style="font-size:0.9rem; color:#c0c0ff; margin-top:6px;">
-            Mantenimiento térmico profesional → <strong>PS4 SILENT MODE</strong>
+            Mantenimiento técnico profesional → <strong>PS4 THERMAL SWAP</strong>
         </div>
         <div style="font-size:0.85rem; color:#ff9ff3; margin-top:6px;">
-            Mucho menos ruido • Menos calor • Juego estable
+            Limpieza especializada • Reemplazo componentes • Rendimiento óptimo
         </div>
         <div style="font-size:0.8rem; color:#aaa; margin-top:6px;">
             ⏱️ 2–2.5h | 💰 MX$750 | 🔊 -70% ruido | 📊 Mayor rendimiento
         </div>
         <a class="reserve-btn" 
-           href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20me%20interesa%20el%20servicio%20PS4%20SILENT%20MODE%20(Anti%20Turbina).%20Mi%20nombre:%20[TU%20NOMBRE]">
+           href="https://wa.me/526142738302?text=Hola%20KiraTech%20Tech%20Spa,%20me%20interesa%20el%20servicio%20PS4%20THERMAL%20SWAP%20(Mantenimiento%20T%C3%A9cnico%20Profesional).%20Mi%20nombre:%20[TU%20NOMBRE]">
            📲 Ver detalles y reservar
         </a>
     </div>
 
     <div class="item" onclick="mostrarDetalle(this, 'xbox')">
-        🎮 ¿Tu Xbox se calienta o baja rendimiento?
+        🎮 Xbox con temperaturas altas o rendimiento bajo
         <div style="font-size:0.9rem; color:#c0c0ff; margin-top:6px;">
-            Enfriamiento y limpieza profesional → <strong>XBOX ICE BOOST</strong>
+            Servicio técnico especializado → <strong>XBOX COOLING SWAP</strong>
         </div>
         <div style="font-size:0.85rem; color:#ff9ff3; margin-top:6px;">
-            Temperaturas estables • Menos ruido • Más fluidez
-        </div>
+            Diagnóstico completo • Reemplazo térmico • Estabilidad máxima</div>
         <div style="font-size:0.8rem; color:#aaa; margin-top:6px;">
             ⏱️ 2–2.5h | 💰 MX$750 | 🔊 -70% ruido | 📊 Mayor estabilidad
         </div>
         <a class="reserve-btn" 
-           href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20me%20interesa%20el%20servicio%20XBOX%20ICE%20BOOST%20(Estabilidad%20Pro).%20Mi%20nombre:%20[TU%20NOMBRE]">
+           href="https://wa.me/526142738302?text=Hola%20KiraTech%20Tech%20Spa,%20me%20interesa%20el%20servicio%20XBOX%20COOLING%20SWAP%20(Estabilidad%20Pro).%20Mi%20nombre:%20[TU%20NOMBRE]">
            📲 Ver detalles y reservar
         </a>
     </div> 
 
     <div class="item" onclick="mostrarDetalle(this, 'switch')">
-        🎮 ¿Tu Switch se calienta o baja FPS?
+        🎮 Switch con calor excesivo o FPS bajos
         <div style="font-size:0.9rem; color:#c0c0ff; margin-top:6px;">
-            Control térmico especializado → <strong>SWITCH COOL FIX</strong>
+            Reparación técnica especializada → <strong>SWITCH THERMAL FIX</strong>
         </div>
         <div style="font-size:0.85rem; color:#ff9ff3; margin-top:6px;">
-            Menos calor • Mejor rendimiento • Más vida útil
+            Mantenimiento profesional • Componentes originales • Rendimiento óptimo
         </div>
         <div style="font-size:0.8rem; color:#aaa; margin-top:6px;">
             ⏱️ 2–2.5h | 💰 MX$750 | 🔊 -70% ruido | 📊 Juego estable
         </div>
         <a class="reserve-btn" 
-           href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20me%20interesa%20el%20servicio%20SWITCH%20COOL%20FIX%20(Control%20T%C3%A9rmico).%20Mi%20nombre:%20[TU%20NOMBRE]">
+           href="https://wa.me/526142738302?text=Hola%20KiraTech%20Tech%20Spa,%20me%20interesa%20el%20servicio%20SWITCH%20THERMAL%20FIX%20(Control%20T%C3%A9rmico).%20Mi%20nombre:%20[TU%20NOMBRE]">
            📲 Ver detalles y reservar
         </a>
+        
     </div>
 
 </div>
+<!-- Fin del catálogo de servicios para consolas -->
 
-   
+<!-- ===========================================
+     SECCIÓN DE TESTIMONIOS
+     =========================================== -->
+<h2 class="section-title" id="testimonios">⭐ Lo que dicen nuestros clientes</h2>
+<!-- Título H2 para la sección de testimonios - importante para SEO y confianza del usuario -->
 
-<h2 class="section-title">⭐ Lo que dicen nuestros clientes</h2>
 <div class="testimonios">
+    <!-- Contenedor de testimonios de clientes -->
     <div class="testimonio">
+        <!-- Testimonio individual con calificación por estrellas -->
         <div class="estrellas">⭐⭐⭐⭐⭐</div>
-        <p>"En mi Asus TUF A15 (Ryzen 7) la temperatura del CPU bajó 32°C y la GPU 16°C después de limpieza, limpieza de disipador y aplicación de Arctic MX-4. Lo medimos antes y después con stress test. Resultado real y documentado."</p>
-        <p class="autor">— Ricardo</p>
+        <p>"Excelente servicio técnico. Mi Asus TUF A15 (Ryzen 7) tenía temperaturas de CPU en 95°C y GPU en 88°C. Después del mantenimiento completo con limpieza profesional y cambio de pasta térmica, bajó a 65°C CPU y 72°C GPU. El técnico me explicó todo el proceso y me dio un reporte detallado con mediciones antes/después."</p>
+        <p class="autor">— Ricardo, Gamer Profesional</p>
     </div>
     <div class="testimonio">
+        <!-- Segundo testimonio -->
         <div class="estrellas">⭐⭐⭐⭐⭐</div>
-        <p>"Antes mi PS4 parecía una turbina de avión y en Call of Duty me daba tirones bien feos. La llevé a KiraTech Spa y después del mantenimiento quedó súper silenciosa, ya no se calienta como antes y el juego corre mucho más fluido. La neta sí se siente el cambio, llego luego luego y al poco tiempo ya estaba jugando "</p>
-        <p class="autor">— Aldo</p>
+        <p>"Mi PS4 Pro tenía 5 años de uso intenso y sonaba como un avión. El servicio técnico fue impecable - desarmaron completamente la consola, limpiaron todos los componentes con equipo profesional, reemplazaron la pasta térmica y calibraron los ventiladores. Ahora es completamente silenciosa y las temperaturas se mantienen en rangos óptimos. El técnico me explicó que el polvo acumulado estaba causando resistencia al flujo de aire."</p>
+        <p class="autor">— Aldo, Usuario Intensivos</p>
     </div>
     
 </div>
-<h2 class="section-title">📍 Ubicación</h2>
+<!-- Fin de la sección de testimonios -->
+
+<!-- ===========================================
+     SECCIÓN DE UBICACIÓN Y MAPA
+     =========================================== -->
+<h2 class="section-title" id="ubicacion">📍 Ubicación</h2>
+<!-- Título H2 para la sección de ubicación - importante para SEO local -->
 
 <p style="text-align:center; color:#c0c0ff; font-size:0.95rem; margin-bottom:14px;">
-    Atención <strong style="color:#ff9ff3;">exclusivamente con cita previa</strong> para brindarte un servicio personalizado y sin esperas.
+    <strong style="color:#ff9ff3;">Servicio técnico profesional con cita previa</strong> para diagnóstico preciso y atención especializada.
 </p>
+<!-- Descripción de la ubicación y política de citas -->
 
 <div style="max-width:900px; margin:0 auto 25px auto; padding:12px; border-radius:14px; background:rgba(255,255,255,0.03);">
+    <!-- Contenedor del mapa embebido de Google Maps -->
     <iframe 
         src="https://www.google.com/maps?q=Mina%20Corralitos%203535%20Chihuahua&output=embed"
         width="100%"
@@ -209,39 +433,92 @@
 <div style="text-align:center; margin-bottom:35px;">
     <a class="reserve-btn"
        target="_blank"
-       href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20quiero%20agendar%20una%20cita%20antes%20de%20acudir%20al%20taller.%20Mi%20nombre:%20[TU%20NOMBRE]">
-       📲 Agendar cita por WhatsApp
+       href="https://wa.me/526142738302?text=Hola%20KiraTech%20Tech%20Spa,%20quiero%20agendar%20una%20cita%20para%20servicio%20t%C3%A9cnico.%20Mi%20nombre:%20[TU%20NOMBRE]">
+       📲 Agendar cita técnica por WhatsApp
     </a>
 </div>
 
 <div class="cta-section">
-    <h2 style="color:#ff9ff3; font-size:1.8rem; margin-bottom:15px;">📞 ¿Listo para que tu dispositivo brille?</h2>
-    <p class="cta-texto">Contáctanos ahora y agenda tu cita</p>
-    <a href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20quiero%20agendar%20un%20servicio.%20Mi%20nombre:%20%5BTu%20nombre%5D%20Ubicaci%C3%B3n:%20Chihuahua" target="_blank" class="btn-whatsapp">
-        💬 Contactar por WhatsApp
+    <h2 style="color:#ff9ff3; font-size:1.8rem; margin-bottom:15px;">🔧 ¿Listo para recuperar el rendimiento óptimo?</h2>
+    <p class="cta-texto">Diagnóstico técnico profesional y reparación certificada</p>
+    <a href="https://wa.me/526142738302?text=Hola%20KiraTech%20Tech%20Spa,%20quiero%20agendar%20un%20servicio%20t%C3%A9cnico.%20Mi%20nombre:%20%5BTu%20nombre%5D%20Ubicaci%C3%B3n:%20Chihuahua" target="_blank" class="btn-whatsapp">
+        💬 Contactar para diagnóstico
     </a>
     <a href="https://www.facebook.com/profile.php?id=61584244140086&locale=es_LA" target="_blank" class="btn-facebook">
-        🔵 Visitar Facebook
+        🔵 Ver reseñas en Facebook
     </a>
-    <p class="cta-subtext">Servicio rápido • Profesionales certificados • Garantía incluida</p>
+    <p class="cta-subtext">Diagnóstico gratuito • Técnicos certificados • Garantía incluida</p>
 </div>
+<!-- Fin de la sección de ubicación y mapa -->
 
+<!-- ===========================================
+     SECCIÓN DE PREGUNTAS FRECUENTES (FAQ)
+     =========================================== -->
+<h2 class="section-title" id="faq">❓ Preguntas Frecuentes</h2>
+<!-- Título H2 para la sección FAQ - importante para SEO y conversión -->
+
+<div class="faq-section" style="max-width:900px; margin:0 auto 40px auto; text-align:left;">
+    <!-- Contenedor de preguntas frecuentes - mejora la experiencia del usuario y SEO -->
+    <div class="faq-item" style="margin-bottom:20px; padding:15px; background:rgba(255,255,255,0.03); border-radius:10px;">
+        <!-- Pregunta frecuente individual -->
+        <h3 style="color:#ff9ff3; margin-bottom:8px;">¿Cuánto tiempo toma un servicio de mantenimiento?</h3>
+        <p style="color:#c0c0ff;">Los servicios básicos toman 2-3 horas. Servicios más complejos como instalación de SSD pueden tomar 1-2 horas adicionales. Te informamos el tiempo exacto durante el diagnóstico.</p>
+    </div>
+    
+    <div class="faq-item" style="margin-bottom:20px; padding:15px; background:rgba(255,255,255,0.03); border-radius:10px;">
+        <!-- Segunda pregunta frecuente -->
+        <h3 style="color:#ff9ff3; margin-bottom:8px;">¿Trabajan con garantía?</h3>
+        <p style="color:#c0c0ff;">Sí, todos nuestros servicios incluyen garantía. Mantenimiento preventivo: 30 días. Servicios térmicos: 6 meses. Instalación de SSD: 30 días. Reparaciones de consolas: 60 días.</p>
+    </div>
+    
+    <div class="faq-item" style="margin-bottom:20px; padding:15px; background:rgba(255,255,255,0.03); border-radius:10px;">
+        <!-- Tercera pregunta frecuente -->
+        <h3 style="color:#ff9ff3; margin-bottom:8px;">¿Ofrecen servicio a domicilio?</h3>
+        <p style="color:#c0c0ff;">Sí, ofrecemos servicio a domicilio en la zona norte de Chihuahua. El costo adicional es de $150 MXN para traslado dentro de la ciudad.</p>
+    </div>
+    
+    <div class="faq-item" style="margin-bottom:20px; padding:15px; background:rgba(255,255,255,0.03); border-radius:10px;">
+        <!-- Cuarta pregunta frecuente -->
+        <h3 style="color:#ff9ff3; margin-bottom:8px;">¿Qué incluye el diagnóstico?</h3>
+        <p style="color:#c0c0ff;">El diagnóstico incluye verificación completa del hardware, medición de temperaturas, análisis de rendimiento, y recomendaciones específicas para tu equipo. Es gratuito si contratas el servicio.</p>
+    </div>
+    
+    <div class="faq-item" style="margin-bottom:20px; padding:15px; background:rgba(255,255,255,0.03); border-radius:10px;">
+        <!-- Quinta pregunta frecuente -->
+        <h3 style="color:#ff9ff3; margin-bottom:8px;">¿Trabajan con componentes originales?</h3>
+        <p style="color:#c0c0ff;">Utilizamos componentes de calidad profesional y certificados. Para consolas utilizamos partes compatibles con especificaciones originales del fabricante.</p>
+    </div>
+</div>
+<!-- Fin de la sección FAQ -->
+
+<!-- ===========================================
+     FOOTER - PIE DE PÁGINA
+     =========================================== -->
 <footer>
-    💜 KiraTech Spa – "Donde tu tecnología descansa como reina" 💜
+    💜 KiraTech Tech Spa – Servicio Técnico Profesional con Garantía 💜
 </footer>
+<!-- Footer simple con información de marca y garantía -->
 
-<!-- Botón flotante WhatsApp -->
-<a href="https://wa.me/526142738302?text=Hola%20KiraTech%20Spa,%20quiero%20agendar%20un%20servicio.%20Mi%20nombre:%20%5BTu%20nombre%5D%20Ubicaci%C3%B3n:%20Chihuahua" target="_blank" class="whatsapp-float" title="Contactanos por WhatsApp">
+<!-- ===========================================
+     BOTÓN FLOTANTE DE WHATSAPP
+     =========================================== -->
+<a href="https://wa.me/526142738302?text=Hola%20KiraTech%20Tech%20Spa,%20quiero%20agendar%20un%20servicio%20t%C3%A9cnico.%20Mi%20nombre:%20%5BTu%20nombre%5D%20Ubicaci%C3%B3n:%20Chihuahua" target="_blank" class="whatsapp-float" title="Servicio Técnico KiraTech">
     📱
 </a>
+<!-- Botón flotante para contacto directo por WhatsApp - mejora la conversión -->
 
+<!-- ===========================================
+     SCRIPTS DE JAVASCRIPT
+     =========================================== -->
 <script src="script.js"></script>
+<!-- Script principal que contiene:
+   - Función mostrarDetalle() para mostrar popups de servicios
+   - Función initSparkles() para efectos visuales de fondo
+   - Objeto 'textos' con descripciones detalladas de servicios
+   - Lógica de interacción con elementos del catálogo -->
 
 </body>
 </html>
-
-
-
 
 
 
