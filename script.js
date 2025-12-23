@@ -1,74 +1,104 @@
 
 
-let abierto = null;
-let elementoActivo = null;
+/**
+ * ===========================================
+ * SCRIPT.JS - FUNCIONALIDAD INTERACTIVA DEL SITIO
+ * ===========================================
+ *
+ * Este archivo contiene toda la lógica JavaScript para el sitio web de KiraTech Tech Spa.
+ * Incluye funciones para mostrar detalles de servicios, efectos visuales y manejo de popups.
+ *
+ * FUNCIONES PRINCIPALES:
+ * - mostrarDetalle(): Muestra popup con información detallada de servicios
+ * - initSparkles(): Crea efectos visuales de fondo con partículas
+ *
+ * OBJETOS PRINCIPALES:
+ * - textos: Objeto que contiene las descripciones HTML detalladas de cada servicio
+ *
+ * VARIABLES GLOBALES:
+ * - abierto: Controla si hay un popup abierto actualmente
+ * - elementoActivo: Elemento DOM actualmente activo
+ */
 
+let abierto = null; // Variable para controlar si hay un popup abierto
+let elementoActivo = null; // Elemento DOM que está actualmente activo
+
+/**
+ * OBJETO TEXTOS - DESCRIPCIONES DETALLADAS DE SERVICIOS
+ * ===========================================
+ * Contiene las plantillas HTML para cada servicio técnico.
+ * Cada propiedad corresponde a un ID de servicio y contiene:
+ * - Título del servicio
+ * - Descripción técnica detallada
+ * - Proceso paso a paso
+ * - Especificaciones técnicas (tiempo, precio, resultados)
+ * - Información de garantía
+ * - Casos técnicos documentados
+ */
 const textos = {
     mantpc: `
     <div class='detalle'>
-        <h3>CORE CLEAN – Servicio Base</h3>
-        <p><strong>El tratamiento de realeza que tu computadora merece.</strong></p>
-        <p>Tu PC es tu compañera de trabajo. Merece descanso y cuidado profesional. En KiraTech Spa le damos el tratamiento completo para que respire como nueva.</p>
+        <h3>DIAGNÓSTICO Y LIMPIEZA PROFESIONAL – Servicio Técnico Completo</h3>
+        <p><strong>Servicio técnico integral para recuperar el rendimiento óptimo de tu computadora.</strong></p>
+        <p>Tu PC es una herramienta de trabajo y entretenimiento. Merece mantenimiento técnico profesional para mantener su rendimiento y prolongar su vida útil.</p>
         
-        <p style="color:#ff9ff3; margin:15px 0; font-weight:600;">📋 QUÉ HACEMOS EN ESTE SERVICIO:</p>
+        <p style="color:#ff9ff3; margin:15px 0; font-weight:600;">📋 PROCESO TÉCNICO DETALLADO:</p>
         <ul>
-            <li><strong>Evaluación Inicial:</strong> Diagnosis completa del estado actual de tu equipo</li>
-            <li><strong>Limpieza Externa:</strong> Polvo en chasis, puertos y ventilaciones</li>
-            <li><strong>Desensamble Profesional:</strong> Apertura cuidadosa sin riesgo</li>
-            <li><strong>Limpieza Interna Profunda:</strong> Aire comprimido y limpieza de componentes</li>
-            <li><strong>Limpieza de Componentes:</strong> Ventiladores, disipador y radiadores</li>
-            <li><strong>Limpieza de Filtros:</strong> Remoción y lavado si aplica</li>
-            <li><strong>Revisión de Conexiones:</strong> Cables, puertos y conectores</li>
-            <li><strong>Medición de Temperaturas:</strong> Antes y después (con reporte)</li>
-            <li><strong>Test de Estabilidad:</strong> Stress test controlado</li>
-            <li><strong>Rearmado y Verificación:</strong> Ensamblado con control de calidad</li>
+            <li><strong>Diagnóstico Inicial:</strong> Análisis completo del hardware y software con herramientas especializadas</li>
+            <li><strong>Inspección Visual:</strong> Verificación de componentes físicos y conexiones</li>
+            <li><strong>Limpieza Profesional:</strong> Remoción de polvo acumulado con aire comprimido industrial</li>
+            <li><strong>Mantenimiento de Componentes:</strong> Limpieza especializada de ventiladores, disipadores y radiadores</li>
+            <li><strong>Verificación de Conexiones:</strong> Chequeo de cables, puertos y conectores internos</li>
+            <li><strong>Medición de Temperaturas:</strong> Monitoreo antes/después con software profesional</li>
+            <li><strong>Test de Estabilidad:</strong> Verificación de funcionamiento óptimo bajo carga</li>
+            <li><strong>Reporte Técnico:</strong> Documentación completa del servicio realizado</li>
         </ul>
         
-        <p style="margin:15px 0;"><strong>⏱️ Tiempo:</strong> 2-3 horas | <strong></p>
-        <p style="margin:15px 0;"><strong>📊 RESULTADOS ESPERADOS:</strong></p>
+        <p style="margin:15px 0;"><strong>⏱️ Tiempo:</strong> 2-3 horas | <strong>💰 Precio:</strong> MX$950</p>
+        <p style="margin:15px 0;"><strong>📊 RESULTADOS TÉCNICOS ESPERADOS:</strong></p>
         <ul>
-            <li>🌡️ Reducción de temperatura: 15-20°C</li>
-            <li>🔊 Ruido: 70-80% más silenciosa</li>
-            <li>⚡ Velocidad: Mejora notable en rendimiento</li>
-            <li>🛡️ Longevidad: Extiende vida útil 2-3 años</li>
+            <li>🌡️ Reducción de temperatura: 15-20°C en componentes críticos</li>
+            <li>🔊 Reducción de ruido: 70-80% menos ruido de ventiladores</li>
+            <li>⚡ Mejora de rendimiento: Respuesta más rápida del sistema</li>
+            <li>🛡️ Prevención de fallos: Extensión de vida útil del equipo</li>
         </ul>
         
-        <p><strong>🛡️ Garantía: 30 días | Incluye Reporte Técnico</strong></p>
-        <p style="color:#d0d0ff; font-size:0.95em;">Tu PC sale como nueva, reluciente y lista para trabajar contigo. Reserva por WhatsApp o inbox — cupos limitados.</p>
+        <p><strong>🛡️ Garantía: 30 días | Incluye Reporte Técnico Detallado</strong></p>
+        <p style="color:#d0d0ff; font-size:0.95em;">Tu PC sale con rendimiento óptimo, temperaturas controladas y funcionamiento certificado. Reserva por WhatsApp o inbox — servicio profesional garantizado.</p>
         <p> 
         <strong>Precio regular:</strong> <s>$950 MXN</s><br>
         <strong>Descuento por apertura navideña🎄</strong> –$350 MXN<br>
         🔥 <strong >Total hoy: $600 MXN</strong>
         </p>
-        <p style="margin:12px 0; color:#fff7; font-size:0.95em;"><strong>Caso real (ejemplo documentado):</strong> En una Asus TUF A15 (Ryzen 7) realizamos limpieza completa, limpieza del disipador, y aplicación de Arctic MX‑4; con pruebas antes/después en stress test el CPU mostró una reducción de ~32°C y la GPU ~16°C. Los resultados varían según el estado del equipo y las condiciones de uso.</p>
+        <p style="margin:12px 0; color:#fff7; font-size:0.95em;"><strong>Caso técnico documentado (ejemplo real):</strong> En una Asus TUF A15 (Ryzen 7) realizamos limpieza completa con aire comprimido industrial, mantenimiento de sistema de enfriamiento, y verificación de todos los componentes. Con pruebas antes/después en stress test el CPU mostró reducción de ~32°C y la GPU ~16°C. Los resultados varían según el estado del equipo y condiciones de uso.</p>
     </div>
     `,
 
     pasta: `
     <div class='detalle'>
-        <h3>❄️ THERMAL BOOST – Enfriamiento MX</h3>
-        <p><strong>Bajar temperaturas es un arte. Nosotros nos encargamos.</strong></p>
-        <p>La pasta térmica se degrada con el tiempo. La cambiamos con técnica profesional y materiales de primera para reducir temperaturas y evitar throttling.</p>
+        <h3>THERMAL SWAP – Reemplazo Profesional de Pasta Térmica</h3>
+        <p><strong>Reemplazo técnico de pasta térmica con compuestos premium para optimizar la disipación de calor.</strong></p>
+        <p>La pasta térmica se degrada con el tiempo, creando una barrera térmica que impide la transferencia eficiente de calor entre CPU/GPU y el disipador.</p>
         
-        <p style="color:#ff9ff3; margin:15px 0; font-weight:600;">📋 QUÉ HACEMOS EN ESTE SERVICIO:</p>
+        <p style="color:#ff9ff3; margin:15px 0; font-weight:600;">📋 PROCESO TÉCNICO CERTIFICADO:</p>
         <ul>
-            <li><strong>Evaluación Térmica:</strong> Medición de temperaturas actuales</li>
-            <li><strong>Retiro del Disipador:</strong> Con cuidado extremo (sin dañar componentes)</li>
-            <li><strong>Limpieza Profunda:</strong> Remoción total de pasta vieja</li>
-            <li><strong>Limpieza de CPU/GPU:</strong> Preparación perfecta con isopropanol</li>
-            <li><strong>Aplicación Profesional:</strong> Técnica del "pea method" (colocación exacta)</li>
-            <li><strong>Reinsertado del Disipador:</strong> Torque exacto, sin sobre-presión</li>
-            <li><strong>Test Inmediato:</strong> Verificación en tiempo real</li>
-            <li><strong>Monitoreo 30 min:</strong> Estabilización térmica completa</li>
+            <li><strong>Diagnóstico Térmico:</strong> Medición de temperaturas actuales con software especializado</li>
+            <li><strong>Desmontaje Profesional:</strong> Retiro del disipador con técnica especializada (sin dañar componentes)</li>
+            <li><strong>Remoción de Pasta Antigua:</strong> Limpieza completa con solventes profesionales</li>
+            <li><strong>Preparación de Superficies:</strong> Limpieza de CPU/GPU con isopropanol de grado técnico</li>
+            <li><strong>Aplicación Técnica:</strong> Método "pea drop" (colocación precisa y uniforme)</li>
+            <li><strong>Reensamblaje Controlado:</strong> Torque exacto en tornillos para presión óptima</li>
+            <li><strong>Verificación Inmediata:</strong> Test de temperaturas en tiempo real</li>
+            <li><strong>Monitoreo de Estabilización:</strong> Verificación térmica durante 30 minutos</li>
         </ul>
         
         <p style="margin:15px 0;"><strong>⏱️ Tiempo:</strong> 45 minutos - 1 hora | <strong>💰 Precio:</strong> MX$400 - MX$650</p>
-        <p style="margin:15px 0;"><strong>📊 RESULTADOS ESPERADOS:</strong></p>
+        <p style="margin:15px 0;"><strong>📊 RESULTADOS TÉCNICOS ESPERADOS:</strong></p>
         <ul>
-            <li>🌡️ Reducción: 10-15°C inmediato</li>
-            <li>⚡ Mejor performance en gaming/render</li>
-            <li>🔧 Evita throttling automático</li>
-            <li>📈 Extiende vida del hardware 3-5 años</li>
+            <li>🌡️ Reducción térmica: 10-15°C en carga máxima</li>
+            <li>⚡ Estabilidad mejorada: Evita throttling automático del procesador</li>
+            <li>🔧 Eficiencia energética: Menor consumo por mejor disipación</li>
+            <li>📈 Longevidad extendida: 3-5 años adicionales de vida útil</li>
         </ul>
         <p> 
         <strong>Precio regular:</strong> <s>$800 MXN</s><br>
@@ -76,9 +106,9 @@ const textos = {
         🔥 <strong >Total hoy: $450 MXN</strong>
         </p>
         
-        <p style="margin:15px 0;"><strong>🏆 MARCAS PREMIUM USADAS:</strong> Arctic MX-4 | Arctic MX-6 (según disponibilidad)</p>
+        <p style="margin:15px 0;"><strong>🏆 COMPUESTOS PREMIUM UTILIZADOS:</strong> Arctic MX-4 | Arctic MX-6 (según especificaciones técnicas)</p>
         <p><strong>🛡️ Garantía: 6 meses | Incluye Reporte Térmico Certificado</strong></p>
-        <p style="color:#d0d0ff; font-size:0.95em;">Perfecta para gamers exigentes, streamers y profesionales que necesitan máximo rendimiento. Reserva por inbox/WhatsApp.</p>
+        <p style="color:#d0d0ff; font-size:0.95em;">Servicio recomendado para gamers competitivos, creadores de contenido y usuarios que demandan máximo rendimiento. Reserva por WhatsApp para diagnóstico técnico.</p>
     </div>
     `,
 
@@ -154,40 +184,39 @@ const textos = {
 
     ps4: `
     <div class='detalle'>
-        <h3>PS4 SILENT MODE – Anti Turbina</h3>
-        <p><strong>Tu PS4 suena como jet. Hora de que descanse como reina.</strong></p>
-        <p>La PS4 es guerrera. Juega horas. Se calienta. Acumula polvo. Necesita spa. Nosotros la cuidamos.</p>
+        <h3>PS4 THERMAL SWAP – Mantenimiento Técnico Profesional</h3>
+        <p><strong>Servicio técnico especializado para restaurar el rendimiento óptimo de tu PS4.</strong></p>
+        <p>La PS4 acumula polvo en componentes críticos causando sobrecalentamiento, ruido excesivo y degradación del rendimiento. Nuestro servicio técnico restaura las condiciones óptimas de funcionamiento.</p>
         
-        <p style="color:#ff9ff3; margin:15px 0; font-weight:600;">📋 QUÉ HACEMOS EN ESTE SERVICIO:</p>
+        <p style="color:#ff9ff3; margin:15px 0; font-weight:600;">📋 PROCESO TÉCNICO CERTIFICADO:</p>
         <ul>
-            
-            <li><strong>Desensamble Seguro:</strong> Apertura profesional sin dañar nada</li>
-            <li><strong>Limpieza Externa:</strong> Carcasa y puertos</li>
-            <li><strong>Limpieza Interna Profunda:</strong> Ventiladores, radiadores, disipador</li>
-            <li><strong>Limpieza del Ventilador Axial:</strong> El culpable del ruido (limpieza a fondo)</li>
-            <li><strong>Limpieza de Filtros de Polvo:</strong> Remoción y limpieza completa</li>
-            <li><strong>Cambio de Pasta Térmica (OPCIONAL):</strong> Si es muy vieja (-10°C más)</li>
-            <li><strong>Revisión de Pads Térmicos:</strong> Reemplazo si están degradados</li>
-            <li><strong>Rearmado Profesional:</strong> Todo vuelve perfectamente ensamblado</li>
-            <li><strong>Test en Juego Exigente:</strong> Verificación de temperatura y ruido real</li>
+            <li><strong>Desensamble Controlado:</strong> Apertura profesional con herramientas especializadas</li>
+            <li><strong>Limpieza Externa:</strong> Carcasa y puertos con productos antistáticos</li>
+            <li><strong>Limpieza Interna Profunda:</strong> Componentes críticos con aire comprimido industrial</li>
+            <li><strong>Mantenimiento del Sistema de Ventilación:</strong> Limpieza especializada del ventilador axial</li>
+            <li><strong>Limpieza de Filtros:</strong> Remoción y reemplazo de filtros de polvo acumulado</li>
+            <li><strong>Reemplazo de Pasta Térmica (OPCIONAL):</strong> Si presenta degradación significativa</li>
+            <li><strong>Verificación de Pads Térmicos:</strong> Inspección y reemplazo si es necesario</li>
+            <li><strong>Reensamblaje Profesional:</strong> Montaje con torque controlado</li>
+            <li><strong>Test de Rendimiento:</strong> Verificación térmica y funcional en juegos exigentes</li>
         </ul>
         
         <p style="margin:15px 0;"><strong>📊 RESULTADOS ESPERADOS:</strong></p>
         <ul>
-            <li>🔊 Ruido: De jet a susurro (80% reducción)</li>
-            <li>🌡️ Temperatura: Baja 10-15°C</li>
-            <li>⚡ Rendimiento: 0 throttling (máximo FPS siempre)</li>
-            <li>🎮 Experiencia: Juegos sin interrupciones</li>
-            <li>📈 Longevidad: Extiende vida útil 2-3 años</li>
+            <li>🔊 Reducción de ruido: 80% menos audible en funcionamiento normal</li>
+            <li>🌡️ Control térmico: Temperaturas 10-15°C más bajas</li>
+            <li>⚡ Estabilidad de rendimiento: Sin throttling automático</li>
+            <li>🎮 Experiencia de juego: Funcionamiento continuo sin interrupciones</li>
+            <li>📈 Extensión de vida útil: 2-3 años adicionales de funcionamiento óptimo</li>
         </ul>
            <p> 
         <strong>Precio regular:</strong> <s>$750 MXN</s><br>
         <strong>Descuento por apertura navideña🎄</strong> –$350 MXN<br>
         🔥 <strong >Total hoy: $400 MXN</strong>
         </p>
-        <p style="margin:15px 0;"><strong>🛠️ SERVICIO COMPLETO O PARCIAL:</strong></p>
-        <p><strong>🛡️ Garantía: 60 días | Incluye Reporte Térmico Certificado</strong></p>
-        <p style="color:#d0d0ff; font-size:0.95em;">Recomendado si tu PS4 suena como turbina después de 4+ años de uso intenso.</p>
+        <p style="margin:15px 0;"><strong>🛠️ SERVICIO TÉCNICO COMPLETO:</strong></p>
+        <p><strong>🛡️ Garantía: 60 días | Incluye Reporte Técnico Certificado</strong></p>
+        <p style="color:#d0d0ff; font-size:0.95em;">Servicio recomendado para PS4 con más de 3 años de uso intenso que presentan síntomas de desgaste térmico.</p>
     </div>
     `,
 
@@ -195,33 +224,33 @@ const textos = {
 
     xbox: `
     <div class='detalle'>
-        <h3>XBOX ICE BOOST – Estabilidad Pro</h3>
-        <p><strong>La Xbox más potente del mundo merece el mejor cuidado del mundo.</strong></p>
-        <p>Xbox Series X es una potencia. Exige cuidados especiales. Nosotros sabemos cómo mantenerla en su prime.</p>
+        <h3>XBOX COOLING SWAP – Servicio Técnico Especializado</h3>
+        <p><strong>Servicio técnico especializado para Xbox Series X/S con componentes de alto rendimiento.</strong></p>
+        <p>Las consolas Xbox Series X/S generan mucho calor debido a su potencia gráfica. El mantenimiento técnico especializado asegura funcionamiento óptimo y longevidad.</p>
         
-        <p style="color:#ff9ff3; margin:15px 0; font-weight:600;">📋 QUÉ HACEMOS EN ESTE SERVICIO:</p>
+        <p style="color:#ff9ff3; margin:15px 0; font-weight:600;">📋 PROCESO TÉCNICO CERTIFICADO:</p>
         <ul>
-            <li><strong>Evaluación Inicial:</strong> Estado actual (temperatura, ruido, rendimiento)</li>
-            <li><strong>Desensamble Profesional:</strong> Apertura sin riesgo de daño</li>
-            <li><strong>Inspección Visual:</strong> Búsqueda de polvo acumulado, corrosión</li>
-            <li><strong>Limpieza Interna Profunda:</strong> Aire comprimido en circuitos, radiadores</li>
-            <li><strong>Limpieza del Ventilador:</strong> Responsable del 90% del ruido</li>
-            <li><strong>Limpieza de Disipador y Radiador:</strong> Máximo flujo de aire</li>
-            <li><strong>Limpieza de Filtros:</strong> Reemplazo si están muy dañados</li>
-            <li><strong>Cambio de Pasta Térmica (OPCIONAL):</strong></li>
-            <li><strong>Revisión de Conexiones:</strong> HDMI, USB, puertos de expansión</li>
-            <li><strong>Rearmado Perfecto:</strong> Sin sonidos extraños</li>
-            <li><strong>Test en Juegos Exigentes:</strong> Forza Motorsport 5, Starfield en Ultra</li>
-            <li><strong>Calibración de Fans:</strong> Balance entre ruido y temperatura</li>
+            <li><strong>Diagnóstico Inicial:</strong> Evaluación completa de temperaturas, ruido y rendimiento</li>
+            <li><strong>Desensamble Controlado:</strong> Apertura profesional sin riesgo de daño a componentes</li>
+            <li><strong>Inspección Técnica:</strong> Verificación de acumulación de polvo y posibles corrosiones</li>
+            <li><strong>Limpieza Profesional:</strong> Aire comprimido industrial en circuitos y radiadores</li>
+            <li><strong>Mantenimiento del Sistema de Ventilación:</strong> Limpieza especializada del ventilador principal</li>
+            <li><strong>Optimización Térmica:</strong> Limpieza de disipador y radiador para flujo máximo de aire</li>
+            <li><strong>Mantenimiento de Filtros:</strong> Reemplazo de filtros dañados por acumulación</li>
+            <li><strong>Reemplazo de Pasta Térmica (OPCIONAL):</strong> Si presenta degradación</li>
+            <li><strong>Verificación de Conectores:</strong> HDMI, USB y puertos de expansión</li>
+            <li><strong>Reensamblaje Profesional:</strong> Montaje con calibración precisa</li>
+            <li><strong>Test de Rendimiento:</strong> Verificación en juegos exigentes (Forza, Starfield)</li>
+            <li><strong>Calibración Final:</strong> Ajuste de ventiladores para balance óptimo</li>
         </ul>
         
-        <p style="margin:15px 0;"><strong>📊 RESULTADOS ESPERADOS:</strong></p>
+        <p style="margin:15px 0;"><strong>📊 RESULTADOS TÉCNICOS ESPERADOS:</strong></p>
         <ul>
-            <li>🔊 Ruido: Casi silenciosa (especialmente Series X)</li>
-            <li>🌡️ Temperatura: Óptima (50-60°C en gaming)</li>
-            <li>⚡ Rendimiento: 4K/120fps sin throttling</li>
-            <li>🎮 Experiencia: Gaming premium sin interrupciones</li>
-            <li>📈 Longevidad: Asegura 5+ años sin problemas</li>
+            <li>🔊 Reducción de ruido: Operación casi silenciosa (especialmente Series X)</li>
+            <li>🌡️ Control térmico: Temperaturas óptimas (50-60°C en gaming intenso)</li>
+            <li>⚡ Estabilidad de rendimiento: 4K/120fps sin throttling térmico</li>
+            <li>🎮 Experiencia de juego: Funcionamiento premium sin interrupciones</li>
+            <li>📈 Longevidad extendida: 5+ años de funcionamiento confiable</li>
         </ul>
         
               <p> 
@@ -230,63 +259,85 @@ const textos = {
         🔥 <strong >Total hoy: $400 MXN</strong>
         </p>
         
-        <p style="margin:15px 0;"><strong>🎯 ESPECIALMENTE RECOMENDADO PARA:</strong> Gamers competitivos, streamers, usuarios intensivos (8+ horas/día)</p>
+        <p style="margin:15px 0;"><strong>🎯 RECOMENDADO PARA:</strong> Gamers competitivos, streamers, usuarios intensivos (8+ horas/día)</p>
         <p><strong>🛡️ Garantía: 60 días | Incluye Reporte Técnico + Fotos Before/After</strong></p>
-        <p style="color:#d0d0ff; font-size:0.95em;">Tu Xbox durará más años, funcionará silenciosa y dará máximo rendimiento siempre.</p>
+        <p style="color:#d0d0ff; font-size:0.95em;">Tu Xbox mantendrá su rendimiento premium, funcionará silenciosa y tendrá años adicionales de vida útil óptima.</p>
     </div>
     `,
 
     switch: `
     <div class='detalle'>
-        <h3>SWITCH COOL FIX – Control Térmico</h3>
-        <p><strong>La Switch más amada merece el mejor cuidado. Portátil, potente, ¡y merecidamente delicada!</strong></p>
-        <p>Switch es diferente. Portátil. Compleja. Pequeñita pero potente. Necesita manos expertas.</p>
+        <h3>SWITCH THERMAL FIX – Reparación Técnica Especializada</h3>
+        <p><strong>Servicio técnico especializado para Nintendo Switch con componentes delicados y complejos.</strong></p>
+        <p>La Switch es un dispositivo portátil complejo que requiere mantenimiento técnico especializado. Sus componentes delicados necesitan cuidado experto para mantener el rendimiento óptimo.</p>
         
-        <p style="color:#ff9ff3; margin:15px 0; font-weight:600;">📋 QUÉ HACEMOS EN ESTE SERVICIO:</p>
+        <p style="color:#ff9ff3; margin:15px 0; font-weight:600;">📋 PROCESO TÉCNICO CERTIFICADO:</p>
         <ul>
-            <li><strong>Diagnosis Inicial:</strong> Chequeo de temperatura, batería, ventilación</li>
-            <li><strong>Desensamble Experto:</strong> Switch es frágil. Cuidado extremo</li>
-            <li><strong>Limpieza Externa:</strong> Carcasa, botones, ventilaciones</li>
-            <li><strong>Limpieza Interna Profunda:</strong> Circuitos, ventiladores, radiador</li>
-            <li><strong>Limpieza del Ventilador:</strong> Micro-ventilador (muy frágil, requiere precisión)</li>
-            <li><strong>Limpieza de Disipador y Heatsinks:</strong> Esencial para portátiles</li>
-            <li><strong>Limpieza de Conectores Joy-Con:</strong> Común problema de desconexión</li>
-            <li><strong>Limpieza de Puerto USB-C:</strong> A menudo acumula pelusa</li>
-            <li><strong>Revisión de Batería:</strong> Capacidad y salud actual</li>
-            <li><strong>Cambio de Pasta Térmica (OPCIONAL):</strong> Si es muy vieja</li>
-            <li><strong>Limpieza de Pantalla:</strong> Sin rayones, sin manchas</li>
-            <li><strong>Test de Rendimiento:</strong> Juego exigente (Zelda BotW, Doom, Fortnite)</li>
+            <li><strong>Diagnóstico Inicial:</strong> Verificación completa de temperatura, batería y ventilación</li>
+            <li><strong>Desensamble Especializado:</strong> Apertura controlada de dispositivo frágil con herramientas precisas</li>
+            <li><strong>Limpieza Externa:</strong> Carcasa, botones y rejillas de ventilación</li>
+            <li><strong>Limpieza Interna Profesional:</strong> Componentes delicados con equipos especializados</li>
+            <li><strong>Mantenimiento del Micro-ventilador:</strong> Limpieza precisa del ventilador de alta precisión</li>
+            <li><strong>Optimización Térmica:</strong> Limpieza de disipador y heatsinks para portátiles</li>
+            <li><strong>Mantenimiento de Conectores:</strong> Limpieza especializada de conectores Joy-Con</li>
+            <li><strong>Limpieza de Puerto USB-C:</strong> Remoción de pelusas y residuos</li>
+            <li><strong>Evaluación de Batería:</strong> Verificación de capacidad y salud actual</li>
+            <li><strong>Reemplazo de Pasta Térmica (OPCIONAL):</strong> Si presenta degradación significativa</li>
+            <li><strong>Limpieza de Pantalla:</strong> Mantenimiento sin rayones ni manchas</li>
+            <li><strong>Test de Rendimiento:</strong> Verificación en juegos exigentes (Zelda, Doom, Fortnite)</li>
         </ul>
         
         <p style="margin:15px 0;"><strong>⏱️ Tiempo:</strong> 1.5 - 2 horas | <strong>💰 Precio:</strong> MX$1,150 - MX$1,650</p>
-        <p style="margin:15px 0;"><strong>📊 RESULTADOS ESPERADOS:</strong></p>
+        <p style="margin:15px 0;"><strong>📊 RESULTADOS TÉCNICOS ESPERADOS:</strong></p>
         <ul>
-            <li>🌡️ Temperatura: Baja 8-12°C (máximo gaming)</li>
-            <li>🔊 Ruido: Ventilador menos audible (40% reducción)</li>
-            <li>🎮 Rendimiento: 60 FPS estables sin throttling</li>
-            <li>⚡ Batería: Mejor duración (menos calor = menos consumo)</li>
-            <li>🎮 Joy-Con: Conexión más estable</li>
-            <li>📈 Longevidad: +2 años de vida útil</li>
+            <li>🌡️ Control térmico: Reducción de 8-12°C en gaming máximo</li>
+            <li>🔊 Reducción de ruido: Ventilador menos audible (40% menos perceptible)</li>
+            <li>🎮 Estabilidad de rendimiento: 60 FPS constantes sin throttling térmico</li>
+            <li>⚡ Eficiencia de batería: Mayor duración (menos consumo térmico)</li>
+            <li>🎮 Conexión Joy-Con: Estabilidad mejorada en conexiones</li>
+            <li>📈 Longevidad extendida: +2 años de funcionamiento óptimo</li>
         </ul>
             <p> 
         <strong>Precio regular:</strong> <s>$750 MXN</s><br>
         <strong>Descuento por apertura navideña🎄</strong> –$350 MXN<br>
         🔥 <strong >Total hoy: $400 MXN</strong>
         </p>
-        <p style="margin:15px 0;"><strong>🔋 NOTA SOBRE BATERÍA:</strong></p>
+        <p style="margin:15px 0;"><strong>🔋 NOTA TÉCNICA SOBRE BATERÍA:</strong></p>
         <ul>
-            <li>Si tienes 3+ años, probablemente necesite reemplazo</li>
-            <li>Costo adicional: MX$640 - MX$900 (batería original aprox.)</li>
-            <li>Pero vale la pena: Switch nuevamente durará 5+ horas</li>
+            <li>Dispositivos con 3+ años probablemente requieren reemplazo de batería</li>
+            <li>Costo adicional: MX$640 - MX$900 (componente original certificado)</li>
+            <li>Recomendado: Switch recupera duración completa de 5+ horas</li>
         </ul>
         
-        <p style="margin:15px 0;"><strong>🎯 ESPECIALMENTE RECOMENDADO PARA:</strong> Gamers portátiles, padres con Switch usada, coleccionistas, streamers portátiles</p>
-        <p><strong>🛡️ Garantía: 45 días | Incluye Reporte Técnico + Limpieza de Pantalla</strong></p>
-        <p style="color:#d0d0ff; font-size:0.95em;">Tu Switch volverá a funcionar como el día que la desempaques. Portátil, fresca, y lista para aventuras.</p>
+        <p style="margin:15px 0;"><strong>🎯 RECOMENDADO PARA:</strong> Gamers portátiles, familias con Switch usada, coleccionistas, creadores de contenido móvil</p>
+        <p><strong>🛡️ Garantía: 45 días | Incluye Reporte Técnico + Mantenimiento de Pantalla</strong></p>
+        <p style="color:#d0d0ff; font-size:0.95em;">Tu Switch recuperará el rendimiento óptimo, funcionará fresca y estará lista para gaming portátil de calidad.</p>
     </div>
     `,
 };
 
+/**
+ * FUNCIÓN mostrarDetalle() - GESTIÓN DE POPUPS DE SERVICIOS
+ * ===========================================
+ * Función principal para mostrar/ocultar los detalles técnicos de cada servicio.
+ * Maneja la lógica de popups, previene múltiples popups abiertos y proporciona
+ * navegación suave hacia el contenido detallado.
+ *
+ * PARÁMETROS:
+ * - el: Elemento DOM del servicio que fue clickeado
+ * - tipo: String identificador del servicio (ej: 'mantpc', 'pasta', 'ps4')
+ *
+ * FUNCIONALIDAD:
+ * - Verifica existencia del contenido del servicio
+ * - Maneja apertura y cierre de popups
+ * - Previene múltiples popups simultáneos
+ * - Aplica animaciones y navegación suave
+ * - Actualiza estado global de elementos activos
+ *
+ * VARIABLES GLOBALES AFECTADAS:
+ * - abierto: Referencia al popup actualmente abierto
+ * - elementoActivo: Elemento DOM actualmente activo
+ */
 function mostrarDetalle(el, tipo){
     console.log('mostrarDetalle llamado con:', tipo);
     
@@ -378,7 +429,31 @@ function mostrarDetalle(el, tipo){
     }, 100);
 }
 
-/* -------- Sparkles background (static, no scroll reaction) -------- */
+/**
+ * FUNCIÓN initSparkles() - EFECTOS VISUALES DE FONDO
+ * ===========================================
+ * Crea un efecto visual de partículas brillantes (sparkles) en el fondo de la página.
+ * Estas partículas son estáticas y no reaccionan al scroll, creando una atmósfera
+ * elegante similar a un spa tech.
+ *
+ * PARÁMETROS:
+ * - options: Objeto de configuración opcional
+ *   - count: Número de partículas a crear (default: 20)
+ *
+ * FUNCIONALIDAD:
+ * - Crea elementos div con clase 'sparkle'
+ * - Asigna tamaños aleatorios (small, medium, large)
+ * - Posiciona aleatoriamente en toda la viewport
+ * - Aplica delays de animación aleatorios para evitar sincronización
+ * - Establece opacidad sutil para efecto elegante
+ * - Agrega clase 'sparkle-static' al body para estilos CSS
+ *
+ * EFECTO VISUAL:
+ * - Partículas brillantes que parpadean suavemente
+ * - Distribución aleatoria por toda la pantalla
+ * - Opacidad baja para no interferir con el contenido
+ * - Animación CSS continua para movimiento sutil
+ */
 function initSparkles(options = {}){
     const count = options.count || 20;
 
@@ -418,6 +493,12 @@ if (document.readyState === 'loading'){
     initSparkles({count:22});
 }
 
-
-
+/**
+ * ===========================================
+ * INICIALIZACIÓN DEL SCRIPT
+ * ===========================================
+ * El script se inicializa automáticamente cuando el DOM está listo.
+ * Crea 22 partículas de efecto visual para el fondo de la página.
+ * No requiere configuración adicional - funciona automáticamente.
+ */
 
